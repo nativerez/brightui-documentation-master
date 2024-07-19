@@ -23,7 +23,7 @@
     "@brighthr/component-button": "^2.1.4",
     "@brighthr/component-checkbox": "^2.0.0",
     "@brighthr/component-contextmenu": "^2.2.2",
-    "@brighthr/component-datepicker": "^2.2.5",
+    "@brighthr/component-datepicker": "^4.1.5",
     "@brighthr/component-donut": "^1.0.2",
     "@brighthr/component-durationpicker": "^1.1.4",
     "@brighthr/component-employeepicker": "^1.4.4",
