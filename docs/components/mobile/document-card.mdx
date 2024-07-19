@@ -1,0 +1,99 @@
+import FigmaExample from "@site/src/components/FigmaExample";
+
+# Document card
+
+Displays document details and associated actions.
+
+<FigmaExample iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D2116%253A2918%26mode%3Ddesign%26t%3D0ntgrtY7FrlC3prN-1" />
+
+### Structure
+
+#### Document Object
+
+- **Icon** (indicates file type)
+- **Filename** (displays the uploaded file name in the format 'filename.ext')
+- **Context menu icon** (actions available, subject to role permissions - such as Details, Rename, Move, Delete)
+- **File type and size**
+- **Created date**
+- **Read receipt required** (icon and text)
+- **Acceptance required** (icon and text)
+- **Footer** (displays follow-up status)
+
+#### Document Folder
+
+- **Icon** (folder icon)
+- **Filename** (displays the folder name)
+- **Created date** (displays "Created on DD Mmm YYYY") - shows on user created folders only
+
+### Guidelines
+
+#### When to use
+
+- Within document folders
+
+#### When not to use
+
+- For anything other than a document
+
+#### Properties
+
+- **Show Follow up** (true/false)
+- **Body - Requiremnts** (true/false)
+- **Requirements - Type** (Read receipt, Acceptance, Both)
+- **Requirements - State** (Complete, Incomplete)
+- **Follow up - Follow up period** (within 7 days, within 30 days, overdue) Displays as 'Due in X day(s)'
+
+#### Colours
+
+- **Card background**
+
+Surfaces/Background/surfaceBgPrimary
+
+- **File details**
+
+Icon - Surfaces/Brand/surfacesBrandDefault
+
+File name Text - Text/Links/textLinkDefault
+
+File type and size - Text/Main/textPrimary
+
+Created date - Text/Main/textPrimary
+
+- **Context menu**
+
+Icon - Surfaces/Brand/surfacesBrandDefault
+
+- **Requirements**
+
+Icon - Surfaces/Error/surfaceErrorDefault
+
+Text - Text/Asset/textErrorLight
+
+- **Follow up status**
+
+Background
+
+Within 30 days - Surfaces/Brand/surfaceBrandLight
+
+Within 7 days - Surfaces/Warning/surfaceWarningLight
+
+Overdue - Surfaces/Error/surfaceErrorLight
+
+Text - Text/Main/textPrimary
+
+#### Typography
+
+- **File name** - Primary bold
+- **File type and size** - Secondary regular
+- **Created date** - Secondary regular
+- **Requirements** - Secondary regular
+- **Follow up status** - Tertiary regular/bold
+
+### Behaviour
+
+Tap kebab menu to display context menu with available actions.
+Tap card body to view full screen details with 'Download' floating action button.
+
+#### Accessibility
+
+TO DO

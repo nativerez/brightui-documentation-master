@@ -1,0 +1,75 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import AccordionReadme from "@brighthr/component-accordion/README.md";
+import Accordion from "@brighthr/component-accordion";
+import Button from "@brighthr/component-button";
+
+# Accordion
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Groups related long content into sections shown one at a time.
+
+### Structure
+
+- **Caret:** Identifies when the accordion is open or closed. Pointing down in open. Pointing right is closed.
+- **Title:** Identifies the title of the accordion.
+- **Description:** Additional text to provide context to the accordion content.
+- **Body:** Contains the content of an accordion.
+
+<SbExample
+  title="Accordion"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-accordion--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Accordion"
+  showLinks
+>
+<Accordion title="Accordion title" >
+  <p>Accordion content is rendered here, by passing in a child element that can contain all the required content, such as text, buttons, images etc.</p>
+  <Button text="Button title" size="lg"/>
+
+</Accordion>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- You have long sections of content with similar structure, such as employees within teams.
+- You want to show only one section at a time (to keep users from being overwhelmed to support progressive disclosure).
+
+#### When not to use
+
+- You want to display all content on the screen at once—use a card.
+- Each section has a single associated action—use a tile.
+- The information to hide is simple and doesn’t have a repeating structure—use a collapse.
+
+### Behaviour
+
+TODO: Add behaviour and considerations associated avatars. The badge and avatar sizes should be the same.
+
+### Accessibility
+
+_Keyboard navigation considerations:_
+
+Links must be keyboard accessible via the Tab key, show a clear indication when a header is selected and opened by pressing the Enter or space key. If a panel is collapsed the content of this must not be focusable by a keyboard until expanded.
+The contrast ratio of focus indicators and the background must be at least 3:1
+
+_Screen reader considerations:_
+
+The accordian title should have a label to indicate that it can be clicked to open.
+
+_Visual considerations:_
+
+The contrast ratio between text on the accordian and the background must be at least 4.5:1
+Users should be able to resize the accordian up to 200%.
+
+</TabItem>
+
+<TabItem value="react" label="React">
+
+<AccordionReadme />
+
+</TabItem>
+</Tabs>

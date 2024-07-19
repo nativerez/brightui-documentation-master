@@ -1,0 +1,68 @@
+---
+---
+
+import SbExample from "@site/src/components/SbExample";
+
+# Avatar
+
+An avatar represents a unique entity, like a person or group.
+
+### Structure
+
+- **Image**
+- **Icon**
+- **Initials**
+- **Border** (true/false)
+- **Presence Icon:** An icon to represent the current status of the employee (In, Out, Absent)
+
+<SbExample
+  title="Have one primary action"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-avatar--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Avatar"
+  iframeUrl="iframe.html?id=components-avatar--acronym&args="
+/>
+
+### Guidelines
+
+#### When to use
+
+- Use an avatar to consistently represent a person or group where the visual or semantic relationship provides context to the content it's in proximity to.
+
+#### When not to use
+
+- An avatar only represents a user or group. Consider an icon to visually represent interactive elements or other metaphors.
+
+#### Variants
+
+- Placeholder
+- Initials only
+- Image
+
+#### Sizes
+
+- The size of an avatar varies depending upon its context.
+- Available sizes (in pixels): 32, 48, 64, 80.
+
+### Behaviour
+
+#### Single
+
+A standalone avatar without adjacent descriptive text must use a tooltip clarifying what it represents.
+
+#### Groups
+
+- A collection of avatars without labels can be grouped.
+- When the group wraps to more than one line use a text action to show and hide additional avatars.
+- Use "+# more" to expand the group. Replace "#" with the number of avatars that aren't visible.
+- Use "- show less" to collapse the group.
+
+#### Stacks
+
+- Avatars form a horizontal stack when space is especially limited.
+- The number of avatars in a stack is variable, but should never cause wrapping.
+- Use a badge after the last avatar to display the number of avatars that aren't visible. It can optionally be an action that leads a user to more context for all associated avatars. The badge and avatar sizes should be the same.
+
+#### Accessibility
+
+- A standalone avatar image should use a descriptive alt tag where the content matches that of the tooltip. See the behavior section for more about the use of a tooltip.
+- If an avatar image is adjacent to descriptive text, like a user or project name, it should use an empty alt tag so it can be ignored by a screen reader.

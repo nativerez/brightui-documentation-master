@@ -1,0 +1,55 @@
+---
+---
+
+import TextImage from '@site/src/components/TextImage';
+
+# Text legibility
+
+Colour plays an important role in text legibility.
+
+## WCAG standards
+
+All text should be legible and meet accessibility standards. [The Web Content Accessibility Guidelines](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) [(WCAG 2.0)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) level AA requires a 4.5:1 colour contrast between text and background for normal text, and 3:1 to large text.
+
+## Text backgrounds
+
+### Text on coloured backgrounds
+
+Dark text is recommended for use on light backgrounds, and white text on dark backgrounds. If the project you are working on has both light and dark themes, make sure the text is available in a contrasting colour against each theme.
+
+Coloured backgrounds or typography additionally change the rules regarding text opacity and different states of text.
+
+<hr />
+
+### Dark text on light backgrounds
+
+<TextImage
+  img="/img/Default-TextLegibility.png"
+>
+
+Dark text on light backgrounds (shown here as #0A2233 on #FFFFFF) applies the following rules:
+
+- High-emphasis text is displayed in **$NEUTRAL-700** (#0A2233)
+- Medium-emphasis text and hint text is displayed in **$NEUTRAL-600** (#92A5B3)
+- Disabled text is displayed in **$NEUTRAL-400** (#92A5B3)
+
+</TextImage>
+
+<hr />
+
+### Text types
+
+<TextImage
+  img="/img/Helper-TextLegibility.png"
+  title="Helper Text"
+>
+
+Helper text gives context about a field's input, such as how the input will be used. It can adopt brand colours, but should be legible as determined by WCAG standards.
+
+For example, helper text on light backgrounds should apply the following rules:
+
+- High emphasis helper: This text is displayed in **$NEUTRAL-700** (#0A2233)
+- Default colour helper text: This text is displayed in **$NEUTRAL-600** (#92A5B3)
+- Default error helper text: This text is displayed in **$ERROR-700** (#990000)
+
+</TextImage>

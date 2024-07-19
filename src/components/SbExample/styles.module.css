@@ -1,0 +1,7 @@
+.storybookWrapper {
+  @apply p-4 bg-white space-x-2;
+}
+
+.storybookWrapper li + li {
+  @apply mt-0;
+}

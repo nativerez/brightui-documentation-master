@@ -1,0 +1,135 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import SideDraw from "@brighthr/component-sidedraw";
+import SideDrawReadme from "@brighthr/component-sidedraw/README.md";
+
+# Side Drawer
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+A side drawer is a versatile UI component that can be used to present a wide range of content in a compact, accessible way.
+
+### Structure
+
+- **Backdrop:** Transparent overlay that contains the side drawer dialog.
+- **Header:** A header containing a question or descriptive phrase that conveys an overview of the purpose.
+- **Body:** A scrollable body with children components. This is the most variable aspect of the side drawer.
+- **Footer:** A footer that contains actionable buttons.
+- **Dismissal:** Button element to dismiss the side drawer.
+- **Actions:** Buttons used to provide explicit action(s) the user can take to continue with a task.
+
+<SbExample
+  title="Side Drawer"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-sidedraw--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/SideDraw"
+  showLinks
+>
+
+<div className="relative top-0 left-0 w-screen h-screen p-0 m-0 ">
+  <button
+    aria-label="open draw button"
+    className="px-2 py-1 mt-10 bg-blue-300 rounded-full "
+    onClick={function noRefCheck(){}}
+    type="button"
+  >
+    <p>
+      Open drawer here
+    </p>
+  </button>
+  <SideDraw
+    bgDismiss
+    close={function noRefCheck(){}}
+    doesHeaderExist
+    title=""
+  >
+    <div className="w-full px-6 py-10">
+      <div>
+        Any content can be rendered in here just pass in a div with full width.
+      </div>
+      <div>
+        You can choose to add or a remove a close button, this adjusts according to the nav bar in webapp and other sites.
+      </div>
+      <div>
+        below medium screen width the side drawer defaults to full screen width, the component also includes a function to stop background scrolling
+      </div>
+    </div>
+  </SideDraw>
+</div>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- For necessary actions outside the main flow, that would require greater scroll depth or function than recommended within a modal.
+- You have long content that you want to keep out of sight at first.
+- To use progressive disclosure to reveal relevant information at the right time.
+- To keep content like structured navigation or screen-specific help accessible.
+
+#### When not to use
+
+- To force users to complete an action before continuing—use a modal.
+- For small bits of information focused on a single action—use a dialog.
+
+### Behaviour
+
+#### Open on user action
+
+Side draws disrupt the main flow. If they come as a surprise, they’re more likely to be dismissed. Only open a side drawer after the user has taken an action, so it’s clear why it was triggered.
+
+#### Ensure the footer remains "sticky"
+
+The footer of a side drawer should remain "sticky" to the bottom of the screen, this is especially important when the Body of the side drawer is scrollable. It allows users to understand the actions they can take from this screen.
+
+#### Direct user with the title
+
+A side drawer title sets the context for everything inside and also stays fixed at the top if the side drawer scrolls down.
+So the title should make it clear what the drawer relates to and what actions might be expected of the user. Keep it short and focused on either an action (verb) or a category (noun).
+
+##### Do
+
+- Edit email address
+- Delete employee?
+- Discard unsaved changes?
+
+##### Don’t
+
+- Edit the email address for this employee
+- Are you sure you want to delete employee?
+- Discard?
+
+#### Allow users to close
+
+Users want to feel in control of their actions. Since side drawers act as interruptions, they can invoke negative feelings in users. Make sure users feel in control by offering them a clear option to close the modal and get back to the main flow.
+
+You should try to match user expectations for the given platform. Responsive and native side drawers should always include a close button in the footer.
+
+If you have a primary action in the side drawer footer then you should have a cancel button
+
+If there is only 1 option and its ‘close’ (not a primary action) then the close function can be handled by the top right X
+
+Desktop side drawers should include a close button in the upper right and the option to close the modal by clicking the overlay, this will disregard any changes they have created in the side drawer. Optionally include a secondary button in the footer.
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+
+{" "}
+
+<MDXProvider>
+  <SideDrawReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

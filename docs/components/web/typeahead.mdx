@@ -1,0 +1,127 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import TypeaheadReadme from "@brighthr/component-typeahead/README.md";
+
+# Typeahead
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+- A typeahead is a type of input which offers a list of specified results as the user interacts with the input. This allows users to quickly find information within a list of options, if they are likely to know (or have an educated idea) pre-search the result they are looking to find.
+
+- The logic gathers what the user inputs and tweaks the suggested results based on their ongoing search enquiry.
+
+- The value or values must be chosen from a predefined set of allowed values.
+
+- The typeahead allows users to search and select a specific value or values from a long list of options much quicker than scrolling through the entire list. If you need to provide fewer options to the user, consider using a picker or radio buttons.
+
+### Design Principles
+
+#### Ease of Use
+
+The component should be easy to understand and use, providing a seamless experience for users when entering data. The user should know that this input is for typing a predetermined search as oppose to a regular dropdown list.
+
+#### Relevance
+
+The suggestions provided by the component should be relevant and closely match the user's input to minimize confusion and improve accuracy.
+
+#### Efficiency
+
+The component should assist users in quickly finding and selecting the desired option, reducing the time and effort required to complete their input.
+
+### Structure
+
+#### Single-select
+
+Single select is used when the use case allows only one option to be selected from the list. For example, a territory in an accident form.
+
+<SbExample
+  title="Single-Select"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-typeahead-listtypeahead--single-select"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Typeahead"
+  iframeUrl="iframe.html?id=components-typeahead-listtypeahead--single-select&args="
+  height="350"
+/>
+
+#### Multi-select
+
+Multi-select is used when there may be multiple selection available for the use case. For example, an employee list for training manager permissions.
+
+<SbExample
+  title="Multi-Select"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-typeahead-listtypeahead--multi-select"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Typeahead"
+  iframeUrl="iframe.html?id=components-typeahead-listtypeahead--multi-select&args="
+  height="350"
+/>
+
+### Guidelines
+
+#### When to use
+
+We use typeaheads when we want a user to select either a single or multiple options from a list of entries. The functionality allows a user who may have a predetermined idea of what option/s they would like to select to more easily navigate a select field.
+
+#### When not to use
+
+- If you need to provide fewer options to the user, consider using a picker or radio buttons.
+- When items within the list are too long. The height of the row will be too large and take up too much space within the list. When there is too many of these, we should consider shortening the text, or using a different UI.
+
+### Anatomy
+
+#### Both components
+
+##### Unselected
+
+- ** Search Icon: ** The search icon denotes that the input allows for searching functionality.
+- ** Text Input placeholder: ** The text input allows the user the knowledge that if they start typing to filter down their search result within the populated list. This will usually be accompanies by the prompt 'Choose a 'context'. Where the context is relating to the use case for the typeahead. This is single for single select or plural for multi select.
+
+##### Focus
+
+- ** Search Icon: ** The search icon denotes that the input allows for searching functionality.
+- ** Text Input: ** The text input allows the user to start typing to filter down their search result within the populated list.
+- ** Focus border ** The border of the input should change to primary-400.
+- ** Optional group property: ** See grouped typeahead documentation.
+- ** Context menu: ** The context menu with the list of items in has a max height of 300 px. This will appear below the input field.
+- ** Item row: ** The items within the list are full width rows. If they are longer than the max width of the input field, then the text will wrap onto the next line. It will never allow for internal horizontal scrolling. If the item in the list is too long, consider using a different UI than typeahead. There is a bg colour state change on hover.
+- ** Bad search: ** Bad search is when the text string does not match any of the set items in the list, we will return a bad search message in the list underneath which reads as 'No results for search'.
+- ** Clear text icon ** The cross on the right hand side will clear the search text when pressed.
+
+##### Values Selected
+
+- ** Items text: ** Shows the item selected within the typeahead up until the max container width of the typeahead input.
+- ** Clear text icon ** The cross on the right hand side will clear the inputted option when selected.
+
+#### Multi-select additions:
+
+##### Focus
+
+- ** Checkbox ** To the right of the list item, a checkbox will be available. The whole text row will select/deselect the checkbox.
+
+##### Values Selected
+
+- ** Pill: ** Showing the count for the number of items selected.
+
+### Behaviour
+
+#### Applicable to both:
+
+- ** Focus on select ** Focus on select will change the state of the input field so that the border changes colour to primary-400, and the list appears below before typing, by simply clicking into the input field.
+- ** Menu open on select ** Whether it is single or multi select or the state is selected or unselected, then clicking within the bounds of the input box will open the list below and allow for searchability.
+- ** List values ** The list values will always appear left aligned to the search text within the input field.
+- ** Internal scroll ** Scroll within the list will be available when the list is longer than the max height of the items list below.
+- ** Long searches ** Long searches bigger than the respected max width of the typeahead will move the text along within its container, meaning the last part of the typed text is visible.
+
+### Accessibility
+
+- Should be navigatable by screen readers.
+- Colours should be considered so that hover and select are visible enough to pass AA WCAG guidelines.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<TypeaheadReadme />
+
+  </TabItem>
+</Tabs>

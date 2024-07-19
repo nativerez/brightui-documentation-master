@@ -1,0 +1,84 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import SwitchReadme from '@brighthr/component-switch/README.md'
+
+# Switch
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Offers a control to switch a setting on or off.
+
+### Structure
+
+- Switch: Indicates whether the switch is on or off
+
+<SbExample
+  title="Switch"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-switch--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Switch"
+  iframeUrl="iframe.html?id=components-switch--primary&args="
+/>
+
+### Guidelines
+
+#### When to use
+
+- To enable users to change a single setting.
+- When the result of turning the setting on and off is clear.
+- For changes that have an instant response (such as disabling a form field).
+
+#### When not to use
+
+- To present multiple options—use a choice group.
+- For settings that require additional help or error handling—use a [checkbox](./checkbox).
+- For changes that require an additional confirmation (saving or submitting)—use a [checkbox](./checkbox).
+
+When you're wondering which option will fit your use case, consider the number and type of options, and if there is any clear default value. The below table summarizes questions and answers about these frequently used UI elements.
+
+| **Switch criteria**                        |                    |
+| ------------------------------------------ | ------------------ |
+| **How many options are available?**        | 1                  |
+| **How many selections can the user make?** | 2 (on/off)         |
+| **Is there a default option?**             | Yes                |
+| **How would you describe the choices?**    | Mutually exclusive |
+| **When does the selection take effect?**   | Immediately        |
+
+### Behaviour
+
+#### Use for immediate changes
+
+Switches are digital on/off switches. They prompt users to choose between two mutually exclusive options and always have a default value. Switches should provide immediate results, giving users the freedom to control their preferences as needed.
+
+### Content
+
+#### Use labels
+
+Keep labels for switches short and direct.
+
+The switch labels should describe what the control will do when the switch is on; they should not be neutral or ambiguous. When in doubt, say the label aloud and append "on/off" to the end. If it doesn't make sense, then rewrite the label.
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <SwitchReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+
+

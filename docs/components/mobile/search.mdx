@@ -1,0 +1,46 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Search
+
+The search input is used to enable users to enter text, and receive back a collection of results matching that text.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D264%253A14036%26mode%3Ddesign%26t%3DCMzKZdZqXGpgKa4L-1"
+  height="300"
+/>
+
+### Structure 
+
+- **Icon**: Magnifying glass icon indicating the purpose of the field
+- **Input**: A text input enabling a search term to be entered
+- **Clear**: A clear icon, enabling the input to be cleared
+
+### Guidelines
+
+#### When to use 
+
+Use the search input whenever you have a set of items available, and you want to enable users to enter a word or words and retrieve items that match.
+
+The search input can be used either for performing a search (i.e. no results are visible, and matching results are returned after the search has taken place) or a filter (i.e. results are visible, and the list is reduced to match the search term).
+
+### Outlined vs solid appearance
+
+Use the outlined appearance for the search box
+
+### Behaviour
+
+#### Interactions
+
+On focus, show the native keyboard for text entry
+When there is content in the field, show the clear icon on the right of the field
+On tap of the clear icon, clear the contents of the search field and remove the clear icon
+
+#### Using with / without a button
+
+The search box can be used without a commit button, if search results (or a filtered set) are provided immediately when the characters in the field change.
+
+If results can't be provided until the term is submitted to the back end, provide a button with an appropriate label in close proximity to the field. Leave the search term within the input after the button has been clicked.
+

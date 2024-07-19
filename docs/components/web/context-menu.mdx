@@ -1,0 +1,105 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {
+  ContextMenuListItem,
+  ContextMenu,
+} from "@brighthr/component-contextmenu";
+import ContextMenuReadme from "@brighthr/component-contextmenu/README.md";
+
+# Context Menu
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Context menu allows for access to multiple controls from a single trigger, saving screen real estate and reducing visual complexty, particularly in repeating instances such as table rows.
+
+### Structure
+
+A context menu component is divided in to two main sub structures: the trigger and the menu itself.
+
+- Context Menu: Contains trigger (with optional label) and resultant menu.
+- Trigger: Interactive area which responds to input (tap, click, etc) with optional text label.
+- Menu: List of actions to be performed. Each item has label, icon (optional) and description (optional). Can be sub-divided into operational groups. Each menu item target size should be sufficient to make accurate choices by common input devices (mouse pointer or finger being most common).
+
+<SbExample
+  title="Context menu"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-contextmenu--primary&args=menuPosition:left"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/ContextMenu"
+  showLinks
+  height={400}
+>
+  <ContextMenu
+    contextName="Settings"
+    customTriggerLayout={null}
+    menuPosition="left"
+    text=""
+  >
+    <ContextMenuListItem
+      button
+      description="Profile@email.com"
+      iconName="user"
+      text="Profile"
+    />
+    <ContextMenuListItem
+      href="https://app.brighthr.com/"
+      iconName="feedback"
+      text="Chat with us"
+    />
+    <ContextMenuListItem
+      description="Company documents"
+      href="https://app.brighthr.com/"
+      iconName="folder"
+      text="Documents"
+    />
+    <ContextMenuListItem
+      href="https://app.brighthr.com/"
+      iconName="xing"
+      text="Profile"
+    />
+    <ContextMenuListItem
+      button
+      disabled
+      iconName="error"
+      text="Disabled button"
+    />
+  </ContextMenu>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use a context menu when the number of actions that can be performed exceeds the available space, or where repeating actions would otherwise cause a large amount of visual confusion in the given space.
+
+#### When not to use
+
+- When there is only one action to be performed. It is an inefficient use of the menu.
+- When a primary action is critically important and should be immediately visually available.
+
+### Behaviour
+
+- Upon activation of the trigger, the context menu is revealed in close proximity. The menu is hidden when the user clicks or taps on any part of the screen that is not part of the menu.
+- While active, the trigger should be in an obviously “active” visual state to clearly highlight from which trigger the menu has spawned.
+- Grouping of the menu is to be done by function. A dividing line should delimit groups where available.
+  The most common (non-destructive) items should be placed at the top of the menu, reducing cognition time.
+- Destructive (irretrevable) actions should always be placed at the bottom and displayed in an different and appropriate colour, red being the standard colour.
+- The default position should be to align the right-side of the menu with the trigger point.
+- The label for the trigger is useful for providing context and accessibility for screen readers. A label for the trigger (defaulted to “Actions”) is recommended where space permits, but not always essential.
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+
+<ContextMenuReadme />
+
+  </TabItem>
+</Tabs>

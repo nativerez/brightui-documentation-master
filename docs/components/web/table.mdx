@@ -1,0 +1,106 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import TableReadme from '@brighthr/component-table/README.md'
+
+# Table
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Data tables are used to organise and display information from a data set. A data table lets users view details from an entire set of data, and helps them find, compare and analyse items.
+
+### Structure
+
+- **Header** A header row containing labels for each of the columns
+- **Sorting indicator** On sortable tables, a pair of arrows on each column indicating the current sort on the table & enabling users to re-sort the data
+- **Data rows** A collection of rows contain the data for the table
+- **Accordion rows** A row type that extends the normal Data row to display a subset of associated data for each row which can be viewed using the row expand/collapse control, can be used with optional Expand/collapse all control
+
+<SbExample
+  title="Table"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-table"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Table"
+  iframeUrl="iframe.html?id=components-table--non-sortable&args="
+  height="500"
+/>
+
+### Related components
+
+Table is often used with
+
+- [Paginator](./paginator)
+- Typeahead for filtering
+- [Date picker](./date-picker) or [Date range picker](./date-range-picker) for filtering
+
+### Guidelines
+
+#### When to use
+
+- Tables are a good choice when you have a set of data where
+  - Items or values associated with items may need comparing with each other
+  - Items might need to be re-ordered depending on their values
+  - Items may need filtering to create a more useful data set for comparisons
+
+#### When not to use
+
+- Tables may not be the best choice when
+  - There will only be a very small number of items in the data set
+  - Users are likely to want to browse through items rather than look for specific values or compare items
+  - You're trying to communicate a trend or summary of the data at-a-glance
+
+### Behaviour
+
+#### Sorting
+
+Optionally, tables are sortable. Make tables sortable wherever users may want to re-order the data based on the values. For data that is a good fit for a table, it's also likely that sorting is useful.
+
+Define the default sort of the table based on the most likely way that users will want to to consume or explore the data (e.g. most recent, alphabetical names, reference number).
+
+If the table is displaying on a small screen (see below) an additional control must be added above the table to indicate the current sort and allow the data to be re-sorted.
+
+#### Filtering
+
+If users are likely to want to filter the data to find specific items or create a smaller data set for comparison, provide filters above the table. Depending on your data, these could include a typeahead component (with or without selections), a select component to pick categories, data or date range pickers, or other controls.
+
+When a filter control is interacted with, the data in the table should be filtered immediately.
+
+#### Small screens
+
+On smaller screens, the table adapts to show a panel for each row.
+Each panel contains:
+
+- **Header** The label of each column header
+- **Data point** The data point associated with each column
+
+### Content
+
+#### Column headings
+
+Column headings should be short, and favour putting the most distinctive part of the column's name first.
+
+#### Alignment
+
+Left-align textual and date columns.
+Right-align numerical and currency columns.
+
+### Accessibility
+
+Column headings, controls, and data points should have appropriate labels for assistive technology. If the data in the table is updated, appropriate ARIA techniques should be used to notify assistive tech of changes.
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <TableReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+
+
+

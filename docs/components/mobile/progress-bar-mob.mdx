@@ -1,0 +1,37 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Progress bar
+
+Progress indicators communicate to the user that the app hasn't stalled and content is being loaded.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D267%253A13339%26mode%3Ddesign%26t%3DySB7imeFHiu6U97m-1"
+  height="600"
+/>
+
+### Structure 
+
+- **Track**: This track displays the progress made (from 0 - 100%)
+- **Progress bar**: This bar travels across the track as progress in made loading the content.
+
+### Guidelines
+
+#### When to use 
+
+- Use a progress bar when a user requests an action and you need to communicate to a user how much of this action has been completed.
+
+#### When not to use 
+
+- Do not use for communicating the progress of a whole page or component loading, use a spinner instead.
+
+### Behaviour 
+
+- As content is loaded, animate the bar progressing through the track.
+- Do not show figures such as percentages, this is purely a visual communication to the user.
+
+### Accessibility 
+
+- The track and the bar need to have a contrast ratio of atleast 4:5:1 in order to properly communicate the progress of the bar along the track.

@@ -1,0 +1,530 @@
+import ColorPalette from '@site/src/components/ColorPalette';
+import ColorBlock from '@site/src/components/ColorBlock';
+import ColorToken from '@site/src/components/ColorToken';
+import DoImage from '@site/src/components/DoImage';
+import DontImage from '@site/src/components/DontImage';
+import TextImage from '@site/src/components/TextImage';
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import ColorPaletteSm from '@site/src/components/ColorPaletteSm';
+
+# Colours
+
+Use colour to signal structure, highlight or emphasize important information or elements, and display different states.
+
+> Use colour intentionally. It’s not decoration. Colour is supposed to be functional.
+
+#### General guidelines
+
+We have different shades for every defined colour in Bright. For most of our colours, the following points should apply:
+
+- Every colour has **specific guidelines** for meaning. We honor these guidelines in order to maintain consistency across the product.
+- It’s usually **safe to combine** the Light and Dark shades of any colour. Text in the Dark shade should be readable on the Light background of its colour.
+- Every non-Dark colour has **two additional shades defined**: `:active` and `:hover`. These additional shades should **only** be used for **very specific** cases.
+
+
+### Text
+
+Text tokens are used for a variety of copy across the system. Each token is used in different contexts and should adhere to the guidelines below. Do not use these tokens on other elements (such as surfaces), instead use the surface token variant.
+
+#### Text Main
+
+<ColorPalette>
+  <ColorBlock
+    title="textPrimary"
+    subtitle="neutral700"
+    hexColor="#0A2233"
+    rgbColor="rgba(10, 34, 51, 1)"
+    hslColor="hsla(205, 67%, 12%, 1)"
+  />
+
+  <ColorBlock
+    title="textSecondary"
+    subtitle="neutral600"
+    hexColor="#475966"
+    rgbColor="rgba(71, 89, 102, 1)"
+    hslColor="hsla(205, 18%, 34%, 1)"
+  />
+
+  <ColorBlock
+    title="textDisabled"
+    subtitle="neutral400"
+    hexColor="#92A5B3"
+    rgbColor="rgba(146, 165, 179, 1)"
+    hslColor="hsla(205, 18%, 64%, 1)"
+    invert
+  />
+
+   <ColorBlock
+    title="textInvert"
+    subtitle="white"
+    hexColor="#FFFFFF"
+    rgbColor="rgba(255, 255, 255, 1)"
+    hslColor="hsla(0, 0%, 100%, 1)"
+    invert
+  />
+</ColorPalette>
+
+#### Token guidelines
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="textPrimary" rgbColor="rgba(10, 34, 51, 1)" /> | textPrimary is used as the main colour for all title and copy on light surfaces. This should be used for high emphasis text to communicate copy to the user. |
+| <ColorToken title="textSecondary" rgbColor="rgba(71, 89, 102, 1)" /> | textSecondary is used as a secondary colour for text that acts as helper or hints to the user (such as input descriptions). |
+| <ColorToken title="textDisabled" rgbColor="rgba(146, 165, 179, 1)" /> | textDisabled is used for text that is within a disabled component. This text will still be ligible but by using this colour token it is communicated to the user that the text is disabled and not relevent. |
+
+#### Text Links
+
+<ColorPalette>
+  <ColorBlock
+    title="textLinkDefault"
+    subtitle="primary700"
+    hexColor="#0057AD"
+    rgbColor="rgba(0, 87, 173, 1)"
+    hslColor="hsla(210, 100%, 34%, 1)"
+  />
+
+  <ColorBlock
+    title="textLinkHover"
+    subtitle="primary600"
+    hexColor="#0070E0"
+    rgbColor="rgba(0, 112, 224, 1)"
+    hslColor="hsla(210, 100%, 44%, 1)"
+  />
+
+  <ColorBlock
+    title="textLinkActive"
+    subtitle="primary500"
+    hexColor="#3399FF"
+    rgbColor="rgba(51, 153, 255, 1)"
+    hslColor="hsla(210, 100%, 60%, 1)"
+  />
+</ColorPalette>
+
+#### Token guidelines
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="textLinkDefault" rgbColor="rgba(0, 87, 173, 1)" /> | textLinkDefault is used for the colour for text links. This can be used in a body of text or within components such as ButtonLinks. This colour has interactions with the variants below depending on its state. |
+| <ColorToken title="textLinkHover" rgbColor="rgba(0, 112, 224, 1)" /> | text links or ButtonLink text will change to this textLinkHover state when they are hovered over. This highlights to the user that the link is clickable and responsive. |
+| <ColorToken title="textLinkActive" rgbColor="rgba(146, 165, 179, 1)" /> | textLinkActive is the state textLinkHover will change to to indicate to the user that the link has been clicked |
+
+
+#### Text Assets
+
+<ColorPalette>
+<ColorBlock
+  title="textAccent"
+  subtitle="accent500"
+  hexColor="#E10078"
+  rgbColor="rgba(225, 0, 120, 1)"
+  hslColor="hsla(328, 100%, 44%, 1)"
+/>
+
+<ColorBlock
+  title="textSuccessDark"
+  subtitle="success900"
+  hexColor="#004C26"
+  rgbColor="rgba(0, 76, 38, 1)"
+  hslColor="hsla(150, 100%, 15%, 1)"
+/>
+
+<ColorBlock
+  title="textSuccessLight"
+  subtitle="success800"
+  hexColor="#006633"
+  rgbColor="rgba(0, 102, 51, 1)"
+  hslColor="hsla(150, 100%, 20%, 1)"
+/>
+
+<ColorBlock
+  title="textErrorDark"
+  subtitle="error800"
+  hexColor="#660000"
+  rgbColor="rgba(102, 0, 0, 1)"
+  hslColor="hsla(0, 100%, 20%, 1)"
+/>
+
+<ColorBlock
+  title="textErrorLight"
+  subtitle="error500"
+  hexColor="#E51A1A"
+  rgbColor="rgba(229, 26, 26, 1)"
+  hslColor="hsla(0, 80%, 50%, 1)"
+/>
+
+<ColorBlock
+  title="textWarningDark"
+  subtitle="warning900"
+  hexColor="#4D2600"
+  rgbColor="rgba(77, 38, 0, 1)"
+  hslColor="hsla(30, 100%, 15%, 1)"
+/>
+
+<ColorBlock
+  title="textWarningLight"
+  subtitle="warning500"
+  hexColor="#E5801A"
+  rgbColor="rgba(229, 128, 26, 1)"
+  hslColor="hsla(30, 80%, 50%, 1)"
+/>
+
+<ColorBlock
+  title="textLightWarning"
+  subtitle="lightWarning900"
+  hexColor="#503E00"
+  rgbColor="rgba(80, 62, 0, 1)"
+  hslColor="hsla(47, 100%, 16%, 1)"
+/>
+</ColorPalette>
+
+#### Token guidelines
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="textAccent" rgbColor="rgba(225, 0, 120, 1)" />      | textAccent can be used as secondary link text for high emphasis actions (such as 'view full profile' on employees cards). It is also used as titles in branding for specific areas of they system (such as lightning). textAccent should be used sparingly and never used for body text. |
+| <ColorToken title="textSuccessDark" rgbColor="rgba(0, 76, 38, 1)" />   | textSuccessDark is one of two colours used for success messaging. This is used for text within a coloured background (eg; surfaceSuccessLight, surfaceBgSecondary). This darker variant is used to maintain a high contrast against the coloured background. For success messaging on white, see below. Despite being usable on coloured background, never use textSuccessDark on any 'default' or 'dark' surfaces. |
+| <ColorToken title="textSuccessLight" rgbColor="rgba(0, 102, 51, 1)" /> | textSuccessLight is the second colour used for success messaging. Unlike the darker variant above, this should not be used on coloured backgrounds as is instead used on white backgrounds only.
+| <ColorToken title="textErrorDark" rgbColor="rgba(102, 0, 0, 1)" /> | textErrorDark is one of two colours used for error messaging. This is used for text within a coloured background (eg; surfaceErrorLight, surfaceError,Secondary). This darker variant is used to maintain a high contrast against the coloured background. For error messaging on white backgrounds, see below. Despite being usable on coloured backgrounds, never use textErrorDark on any 'default' or 'dark' durfaces. |
+| <ColorToken title="textErrorLight" rgbColor="rgba(229, 26, 26, 1)" /> | textErrorLight is the second colour used for error messaging. Unlike the darker variant above, this should not be used on coloured backgrounds as is instead used on white backgrounds only. |
+| <ColorToken title="textWarning" rgbColor="rgba(77, 38, 0, 1)" /> | textWarning is used for warning messaging titles to users (see alerts, see badge). This can be used on light and white surfaces. Do not use this on "dark" or "default" surfaces. Do not use this as a colour for body text (longer than 1-2 words) Instead use textWarningLight. |
+| <ColorToken title="textWarningLight" rgbColor="rgba(77, 38, 0, 1)" /> | textWarningLight is used for warning messaging body text to users (see alerts, see badge). This can be used on light and white surfaces. Do not use this on "dark" or "default" surfaces. |
+| <ColorToken title="textLightWarning" rgbColor="rgba(80, 62, 0, 1)" /> | textLightWarning is used for light warning messaging to users (see badge). This can be used on light and white surfaces. Do not use this on "dark" or "default" surfaces. |
+
+### Surfaces
+
+<TwoColGrid>
+
+<div class="w-3/5">
+  Surface tokens are used for a variety of containers, blocks and components across the product estate. Each token is used in different contexts and should adhere to the guidelines below. Do not use these tokens on other elements (such as text), instead use the text token variant.
+
+  Surface tokens can be used to communicate an element or components purpose quickly to the user before they have even read any copy related to it. The spectrum is as follows.
+</div>
+
+<div>
+
+<ColorPaletteSm title="Informative" hexColor01="#0057AD" hexColor02="#3DB0F7" hexColor03="#EBF7FF"/>
+<ColorPaletteSm title="Positive, success" hexColor01="#006633" hexColor02="#00994C" hexColor03="#CCFFE5"/>
+<ColorPaletteSm title="Passive" hexColor01="#0A2233" hexColor02="#92A5B3" hexColor03="#F0F6FA"/>
+<ColorPaletteSm title="Warning, notice" hexColor01="#663300" hexColor02="#E5801A" hexColor03="#FFE5CC"/>
+<ColorPaletteSm title="Negative, error" hexColor01="#990000" hexColor02="#E51A1A" hexColor03="#FFE5E6"/>
+
+</div>
+
+</TwoColGrid>
+
+#### Background surfaces
+
+<ColorPalette>
+  <ColorBlock
+    title="surfaceBgPrimary"
+    subtitle="white"
+    hexColor="#FFFFFF"
+    rgbColor="rgba(255, 255, 255, 1)"
+    hslColor="hsla(0, 0%, 100%, 1)"
+    invert
+  />
+
+  <ColorBlock
+    title="surfaceBgSecondary"
+    subtitle="neutral50"
+    hexColor="#FAFDFF"
+    rgbColor="rgba(250, 253, 255, 1)"
+    hslColor="hsla(204, 100%, 99%, 1)"
+    invert
+  />
+
+  <ColorBlock
+    title="surfaceBgNav"
+    subtitle="neutral700"
+    hexColor="#102132"
+    rgbColor="rgba(16, 33, 50, 1)"
+    hslColor="hsla(210, 52%, 13%, 1)"
+  />
+</ColorPalette>
+
+#### Token guidelines
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceBgPrimary" rgbColor="(rgba(255, 255, 255, 1)" /> | surfaceBgPrimary is the primary background for the UI. This allows us to create depth within the visual hierarchy and should be used in most usecases. |
+| <ColorToken title="surfaceBgSecondary" rgbColor="rgba(250, 253, 255, 1)" /> | surfaceBgSecondary is used as a secondary background colour for elements within the UI. this allows us to create further depth between the background and some elements. This can also be used within components such as tables and filter dialogues to create a flat contrast from the background or other elements within the component. |
+| <ColorToken title="surfaceBgNav" rgbColor="rgba(16, 33, 50, 1)" /> | surfaceBgNav is used as the background for the navigation bar within BrightHR's webapp. This is the only usecase for this colour and it should not be applied anywhere else. Always be sure to use light text tokens for copy or icons on this background. |
+
+#### Brand surfaces
+
+<ColorPalette>
+<ColorBlock
+  title="surfaceBrandDark"
+  subtitle="primary700"
+  hexColor="#0057AD"
+  rgbColor="rgba(0, 87, 173, 1)"
+  hslColor="hsla(210, 100%, 34%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceBrandDefault"
+  subtitle="primary400"
+  hexColor="#3DB0F7"
+  rgbColor="rgba(61, 176, 247, 1)"
+  hslColor="hsla(203, 92%, 60%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceBrandLight"
+  subtitle="primary50"
+  hexColor="#EBF7FF"
+  rgbColor="rgba(235, 247, 255, 1)"
+  hslColor="hsla(204, 100%, 96%, 1)"
+  invert
+/>
+</ColorPalette>
+
+#### Token guidelines
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceBrandDark" rgbColor="rgba(0, 87, 173, 1)" /> | surfaceBrandDark can be used to communicate informational components and elements. This is the darkest variant for brand surfaces and has the highest contrast to any background (other than surfaceBgNav) and as such will act as one of most important elements in the UIs visual hierarchy if applied. This should only be used for elements which will have short, direct copy (eg, badge, buttons, tags) |
+| <ColorToken title="surfaceBrandDefault" rgbColor="rgba(61, 176, 247, 1)" />   | surfaceBrandDefault is BrightHRs primary brand colour and runs as a constant throughout the entire system. This is also used for informational elements but be wary of using this too much to distract from branding elements. Similarly to surfaceBrandDark, this should only be used for mostly decorative surfaces and elements so please refrain from using this as a background for containers with large amounts of text. | |
+| <ColorToken title="surfaceBrandLight" rgbColor="rgba(235, 247, 255, 1)" /> | surfaceBrandLight can be used to communicate informational components and elements. This is the lightest variant for brand surfaces and as such is lower in the visual hierarchy than other default or dark variants of this surface (and any other). This can be used for information elements that require more copy (such as alerts) and requires the darkest variants of any text token.
+
+#### Success surfaces
+
+<ColorPalette>
+<ColorBlock
+  title="surfaceSuccessDark"
+  subtitle="success800"
+  hexColor="#006633"
+  rgbColor="rgba(0, 102, 51, 1)"
+  hslColor="hsla(150, 100%, 20%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceSuccessDefault"
+  subtitle="success700"
+  hexColor="#00994C"
+  rgbColor="rgba(0, 153, 76, 1)"
+  hslColor="hsla(150, 100%, 30%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceSuccessLight"
+  subtitle="success100"
+  hexColor="#CCFFE5"
+  rgbColor="rgba(204, 255, 229, 1)"
+  hslColor="hsla(149, 100%, 90%, 1)"
+  invert
+/>
+</ColorPalette>
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceSuccessDark" rgbColor="rgba(0, 102, 51, 1)" /> | surfaceSuccessDark can be used to communicate success components and elements. This is the darkest variant for success surfaces and has the highest contrast to any background (other than surfaceBgNav) and as such will act as one of most important elements in the UIs visual hierarchy if applied. This should only be used for elements which will have short, direct copy (eg, badge, buttons, tags) |
+| <ColorToken title="surfaceSuccessDefault" rgbColor="rgba(0, 153, 76, 1)" />   | surfaceSuccessDefault is used for success elements that similarly to surfaceSuccessDark don't contain much text. This can be used for progress bars and icons. If text is required, please use textInvert. |
+| <ColorToken title="surfaceSuccessLight" rgbColor="rgba(204, 255, 229, 1)" /> | surfaceSuccessLight is used for success elements that have a larger body of text (such as alerts). textPrimary and textSecondary can be used on this as a container background, but refrain from using textInvert. |
+
+#### Warning surfaces
+
+##### Warning
+
+Use Warning tokens for elements that need to be brought to the attention of the user urgently, but do not stop the users current flow. These may affect other settings or processes, or even the how data is stored and altered, however the user can continue with their actions. Elements that the user need to be brought attention to in order to continue their flow, should user the 'error' tokens.
+
+<ColorPalette>
+<ColorBlock
+  title="surfaceWarningDark"
+  subtitle="Warning800"
+  hexColor="#663300"
+  rgbColor="rgba(102, 51, 0, 1)"
+  hslColor="hsla(30, 100%, 20%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceWarningDefault"
+  subtitle="Warning500"
+  hexColor="#E5801A"
+  rgbColor="rgba(229, 128, 26, 1)"
+  hslColor="hsla(30, 80%, 50%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceWarningLight"
+  subtitle="tWarning100"
+  hexColor="#FFE5CC"
+  rgbColor="rgba(255, 229, 204, 1)"
+  hslColor="hsla(29, 100%, 90%, 1)"
+  invert
+/>
+</ColorPalette>
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceWarningDark" rgbColor="rgba(102, 51, 0, 1)" /> | surfaceWarningDark can be used to communicate warning components and elements. This is the darkest variant for error surfaces and has the highest contrast to any background (other than surfaceBgNav) and as such will act as one of most important elements in the UIs visual hierarchy if applied. This should only be used for elements which will have short, direct copy (eg, badge, buttons, tags) |
+| <ColorToken title="surfaceWarningDefault" rgbColor="rgba(229, 128, 26, 1)" />   | surfaceWarningDefault is used for warning elements that similarly to surfaceSuccessDark don't contain much text. This can be used for components like; alert, butons aswell as error icons. If text is required, please use textInvert. |
+| <ColorToken title="surfaceWarningLight" rgbColor="rgba(255, 229, 204, 1)" /> | surfaceWarningLight is used for warning elements that have a larger body of text (such as alerts). textPrimary and textSecondary can be used on this as a container background, but refrain from using textInvert. |
+
+##### Light Warning
+
+LightWarning tokens; similarly to Warning tokens, highlight areas that need attention from the user but aren't urgent or need to be actioned immediately. LightWarning surfaces and borders are used sparingly over the product estate, so think carefully if these tokens should be used and will bring the attention of components or elements to the user correctly.
+
+<ColorPalette>
+<ColorBlock
+  title="surfaceLightWarningDark"
+  subtitle="lightWarning800"
+  hexColor="#5C450A"
+  rgbColor="rgba(92, 69, 10, 1)"
+  hslColor="hsla(43, 80%, 20%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceLightWarningDefault"
+  subtitle="lightWarning500"
+  hexColor="#E5AC1A"
+  rgbColor="rgba(229, 172, 26, 1)"
+  hslColor="hsla(43, 80%, 50%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceLightWarningLight"
+  subtitle="lightWarning100"
+  hexColor="#FFFACC"
+  rgbColor="rgba(255, 250, 204, 1)"
+  hslColor="hsla(54, 100%, 90%, 1)"
+  invert
+/>
+</ColorPalette>
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceLightWarningDark" rgbColor="rgba(92, 69, 10, 1)" /> | surfaceLightWarningDark can be used to communicate error components and elements. This is the darkest variant for warning surfaces and has the highest contrast to any background (other than surfaceBgNav) and as such will act as one of most important elements in the UIs visual hierarchy if applied. This should only be used for elements which will have short, direct copy (eg, badge, buttons, tags) |
+| <ColorToken title="surfaceLightWarningDefault" rgbColor="rgba(229, 172, 26, 1)" />   | surfaceLightWarningDefault is used for warning elements that similarly to surfaceSuccessDark don't contain much text. This can be used for components like; alert, butons aswell as error icons. If text is required, please use textInvert. |
+| <ColorToken title="surfaceLightWarningLight" rgbColor="rgba(255, 250, 204, 1)" /> | surfaceLightWarningLight is used for warning elements that have a larger body of text (such as alerts). textPrimary and textSecondary can be used on this as a container background, but refrain from using textInvert. |
+
+#### Error surfaces
+
+Error surfaces are used to convey components or elements that require immediate attention and will either stop the user from completing their task, have a negative effect on their task, or even provide a destructive action (such as deleting). 
+
+<ColorPalette>
+<ColorBlock
+  title="surfaceErrorDark"
+  subtitle="error800"
+  hexColor="#990000"
+  rgbColor="rgba(153, 0, 0, 1)"
+  hslColor="hsla(0, 100%, 30%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceErrorsDefault"
+  subtitle="error500"
+  hexColor="#E51A1A"
+  rgbColor="rgba(229, 26, 26, 1)"
+  hslColor="hsla(0, 80%, 50%, 1)"
+/>
+
+<ColorBlock
+  title="surfaceErrorLight"
+  subtitle="error50"
+  hexColor="#FFE5E6"
+  rgbColor="rgba(255, 229, 230, 1)"
+  hslColor="hsla(358, 100%, 95%, 1)"
+  invert
+/>
+</ColorPalette>
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="surfaceErrorDark" rgbColor="rgba(153, 0, 0, 1)" /> | surfaceErrorDark can be used to communicate error components and elements. This is the darkest variant for error surfaces and has the highest contrast to any background (other than surfaceBgNav) and as such will act as one of most important elements in the UIs visual hierarchy if applied. This should only be used for elements which will have short, direct copy (eg, badge, buttons, tags) |
+| <ColorToken title="surfaceErrorDefault" rgbColor="rgba(229, 26, 26, 1)" />   | surfaceErrorDefault is used for error elements that similarly to surfaceSuccessDark don't contain much text. This can be used for components like; alert, butons aswell as error icons. If text is required, please use textInvert. |
+| <ColorToken title="surfaceErrorLight" rgbColor="rgba(255, 229, 230, 1)" /> | surfaceErrorLight is used for error elements that have a larger body of text (such as alerts). textPrimary and textSecondary can be used on this as a container background, but refrain from using textInvert. |
+
+### Borders
+
+Like surfaces; there are a number of borders that are used in different contexts through the system and are used to communicate a components purpose quickly. Some border tokens should only be used with other surface tokens, these are outlined below. Do not use a surface variant as a border instead use the token variant.
+
+<ColorPalette>
+<ColorBlock
+  title="borderPrimary"
+  subtitle="border"
+  hexColor="#0000001A"
+  rgbColor="rgba(0, 0, 0, 0.1))"
+  hslColor="hsla(0, 0%, 0%, 0.1)"
+  invert
+/>
+
+<ColorBlock
+  title="borderNeutral"
+  subtitle="neutral400"
+  hexColor="#92A5B3"
+  rgbColor="rgba(146, 165, 179, 1)"
+  hslColor="hsla(205, 18%, 64%, 1)"
+/>
+
+<ColorBlock
+  title="borderSuccess"
+  subtitle="success700"
+  hexColor="#00994C"
+  rgbColor="rgba(0, 153, 76, 1)"
+  hslColor="hsla(150, 100%, 30%, 1)"
+/>
+
+<ColorBlock
+  title="borderBrandDark"
+  subtitle="primary700"
+  hexColor="#0057AD"
+  rgbColor="rgba(0, 87, 173, 1)"
+  hslColor="hsla(210, 100%, 34%, 1)"
+/>
+
+<ColorBlock
+  title="borderBrandLight"
+  subtitle="primary400"
+  hexColor="#3DB0F7"
+  rgbColor="rgba(61, 176, 247, 1)"
+  hslColor="hsla(203, 92%, 60%, 1)"
+/>
+
+ <ColorBlock
+  title="borderDestructive"
+  subtitle="error700"
+  hexColor="#990000"
+  rgbColor="rgba(153, 0, 0, 1)"
+  hslColor="hsla(0, 100%, 30%, 1)"
+  />
+
+  <ColorBlock
+  title="borderError"
+  subtitle="error500"
+  hexColor="#E51A1A"
+  rgbColor="rgba(229, 26, 26, 1)"
+  hslColor="hsla(0, 80%, 50%, 1)"
+  />
+
+<ColorBlock
+  title="borderWarning"
+  subtitle="warning500"
+  hexColor="#E5801A"
+  rgbColor="rgba(229, 128, 26, 1)"
+  hslColor="hsla(30, 80%, 50%, 1)"
+  />
+
+<ColorBlock
+  title="borderLightWarning"
+  subtitle="lightWarning500"
+  hexColor="#E5AC1A"
+  rgbColor="rgba(229, 172, 26, 1)"
+  hslColor="hsla(43, 80%, 50%, 1)"
+/>
+
+</ColorPalette>
+
+| Token      | Guidelines |
+| ----------- | ----------- |
+| <ColorToken title="borderPrimary" rgbColor="rgba(10, 34, 51, 0.1)" /> | Use this for an surfaces with a dark or default variant. This border has 10% opacity and as such will add a darker border of your surface colour. |
+| <ColorToken title="borderNeutral" rgbColor="rgba(146, 165, 179, 1)" />   | Use for neutral containers and components. This should be used with light surfaces. If you need a border for your dark or default surfaces, use borderPrimary. |
+| <ColorToken title="borderSuccess" rgbColor="rgba(0, 153, 76, 1)" /> | Use for success containers and components. This should be used with the light variant of success surfaces. If you need a border for your dark or default surfaces, use borderPrimary. |
+| <ColorToken title="borderBrandDark" rgbColor="rgba(0, 87, 173, 1)" /> | Use for informational containers and components and secondary outline CTAs. |
+| <ColorToken title="borderBrandLight" rgbColor="rgba(61, 176, 247, 1)" />   | Use for informational containers and components. This should be used with light variant of brand surfaces, this border can also be used for surfaceBgPrimary. If you need a border for your dark or default surfaces, use borderPrimary. |
+| <ColorToken title="borderDestructive" rgbColor="rgba(153, 0, 0, 1)" /> | Use for destructive containers and components destructive outline CTAs. |
+| <ColorToken title="borderError" rgbColor="rgba(229, 26, 26, 1)" />   | Use for error containers and components. This should be used with light variant of error surfaces. If you need a border for your dark or default surfaces, use borderPrimary. |
+| <ColorToken title="borderWarning" rgbColor="rgba(229, 128, 26, 1)" /> | Use for warning containers and components. This should be used with the light variant of warning surfaces. If you need a border for your dark or default surfaces, use borderPrimary. |
+| <ColorToken title="borderLightWarning" rgbColor="rgba(229, 172, 26, 1)" /> | Use for warning containers and components. This should be used with the light variant of light warning surfaces. If you need a border for your dark or default surfaces, use borderPrimary. |
+
+

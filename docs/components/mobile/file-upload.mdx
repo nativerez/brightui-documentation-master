@@ -1,0 +1,37 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# File upload
+
+Provides way for users to upload a file or photo, create a new folder for documents, or take a photo. The file & photo selection itself takes place using the native device browser; the taking of a photo using the device camera.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D23%253A523%26mode%3Ddesign%26t%3DG5kYbuUG6JXp82vH-1"
+  height="600"
+/>
+
+### Structure
+
+Launched from a [FAB](./buttons.mdx) when applying to the whole view, or another button if applying only to part of the view, the file upload shows one or more of four options, each with an accompanying icon.
+
+- Upload files: Launches a file browser on the device. After selecting a file, the user can review the selection and confirm the upload.
+- Upload photos: Launches a photo browser on the device. After selecting a photo, the user can review the selection and confirm the upload.
+- New folder: Launches a [modal](./modal-mob.mdx) enabling a folder name to be entered
+- Take photo: Launches the camera on the device.
+- Dividing line: Optionally position between options to logically separate them
+
+### Guidelines
+
+#### When to use 
+
+- Use the file upload component whenever you need the user to be able to pick an existing file or photo from their device, or take a photo to use in a Bright mobile app
+
+### Rules around dividing lines
+
+Use dividing lines sparingly, and only if there are three or more options. 
+
+### Accessibility
+
+TO DO

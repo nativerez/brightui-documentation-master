@@ -1,0 +1,37 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Bottom navigation bar 
+The bottom navigation bar serves as a primary means of navigation within the application, allowing users to easily switch between major sections or views.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D23%253A403%26mode%3Ddesign%26t%3DmcQLlwThNlz091pG-1"
+  height="600"
+/>
+
+### Structure 
+
+The bottom navigation bar consists of 4 navigation items & an optional FAB, depending on the area of the product. 
+
+- **Iconography**: Use clear, recognizable icons for each navigation option. Icons should be meaningful and a clear representation of the area.
+- **Labels**: Labels should always be paired with an icon in the navigation bar, this ensures the user can distinguish the areas they can navigate to. 
+- **Spacing**: There should be consistent spacing between navigation items to create comfortable touch targets.
+- **Active State**: When in an area, the navigation item should display a horizontal line in Primary 700 above the icon.
+- **Overflow Menu**: If there are more navigation items than can comfortably fit on the bar, this will fall into an overflow "menu" or "more" option.
+- **Badges**: Small badges can be present on the icons, positioned on the top righthand side. Badges would usually display numbers. 
+
+### Guidelines & Behaviour 
+
+- Only one navigation item can be active at one time. 
+- Navigation items are triggered by tapping on them. 
+- Each navigation item triggers a bottom sheet, when a bottom sheet is triggered the bottom navigation bar is hidden. 
+- Navigation items can display badges if necessary, to alert users of new information or action needed. 
+
+
+### Accessibility
+
+- Contrast: Ensure sufficient contrast between icons, labels, and background for improved readability.
+- Text Alternative: Provide text alternatives for icons to support users who rely on screen readers.
+

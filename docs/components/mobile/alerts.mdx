@@ -1,0 +1,59 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Alert
+
+Breaks the main user flow to present information.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D416%253A13477%26mode%3Ddesign%26t%3DUjUL4NjaqahignL1-1"
+  height="600"
+/>
+
+### Structure
+
+- **Icon** (true/false)
+- **Title** (true/false)
+- **Description**
+
+### Guidelines
+
+#### When to use
+
+- When you want to interrupt a user’s journey with relevant information. For things like status messages and additional explanations.
+
+#### When not to use
+
+- When there are already many on the screen. Don’t overwhelm the user.
+- For messages that shouldn’t interrupt the flow—consider heading and text.
+- When no results match a user query—use an empty state.
+- When a user has to solve an issue as soon as possible—use a modal.
+
+#### Variants
+
+- Information
+- Success
+- Warning
+- Error
+
+#### Sizes
+
+- With a title and Icon
+- With description only
+
+### Behaviour
+
+#### Use more than just one colour
+
+To maximize accessibility, make sure the message is clear from the content. Icons can also support the message. Color alone doesn't always distinguish different alert types.
+
+#### Include ability to dismiss message
+
+Provide a clear action to dismiss the alert. This should be a text button to not take up too much real estate and distract from the message of the alert.
+
+#### Accessibility
+
+- If sticky positioning is used, the user must still be able to access and view focusable elements the Alert may be covering.-- If an avatar image is adjacent to descriptive text, like a user or project name, it should use an empty alt tag so it can be ignored by a screen reader.
+- An Alert is separate from, but complimentary to validation error messages. In this way an Alert announces that there are validation errors and links a user to each instance.

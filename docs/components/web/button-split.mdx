@@ -1,0 +1,206 @@
+---
+sidebar_label: Split Button
+---
+
+import SbExample from "@site/src/components/SbExample";
+import TwoColGrid from "@site/src/components/TwoColGrid";
+import FigmaExample from "@site/src/components/FigmaExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SplitButton from "@brighthr/component-split-button";
+import SplitButtonReadme from "@brighthr/component-split-button/README.md";
+
+# Split Button
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Allows an interaction focal point for multiple actions a user can take. A split button is a dual-function menu button that offers a default action as well as the possibility of choosing a different action by selecting from a set of alternatives.
+
+### Structure
+
+- **Container:** Wraps the content, and allows for a colour style/s to be added.
+- **Text:** Conveys the action message relevant to the button.
+- **Dropdown segment:** This interactive area situated inside of the right of the button container indicates a selection of multiple options from a click interaction. This dropdown is rendered using the [Context Menu](./context-menu) component
+
+<SbExample
+  title="Split button"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-splitbutton--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/SplitButton"
+>
+  <SplitButton
+    destructiveAction={{
+      iconName: "trash",
+      label: "Destructive action",
+      onClick: function noRefCheck() {},
+    }}
+    primaryAction={{
+      iconName: "plus-thick",
+      label: "Put primary action name here",
+      onClick: function noRefCheck() {},
+    }}
+    secondaryActions={[
+      {
+        iconName: "edit",
+        label: "Secondary action 1",
+        onClick: function noRefCheck() {},
+      },
+    ]}
+  />
+</SbExample>
+
+### Guidelines
+
+Split buttons are used when there are many actions available for the user, but not the space or real-estate to have individual buttons for each action.
+
+The split button consists of one button part and one list part. The button part is a default/primary action which is accessible without opening the list of other actions. The list can be clicked to open other actions.
+
+#### When to use
+
+- To let users select from multiple parallel actions. Actions are parallel when each represents a path forward for the user and none cancel the action.
+- To reduce visual complexity when there are multiple actions a user can take
+
+#### When not to use
+
+- To provide a way to navigate between pages, use an [Button Link](button-link) instead
+- To provide a way to choose between primary and secondary actions, use two different Buttons instead
+
+#### Size
+
+Split buttons can be small or large. The default size is small.
+
+<SbExample
+  title="Size variants"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-splitbutton--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/SplitButton"
+>
+<SplitButton
+    size="sm"
+    destructiveAction={{
+      iconName: "trash",
+      label: "Destructive action",
+      onClick: function noRefCheck() {},
+    }}
+    primaryAction={{
+      iconName: "plus-thick",
+      label: "Put primary action name here",
+      onClick: function noRefCheck() {},
+    }}
+    secondaryActions={[
+      {
+        iconName: "edit",
+        label: "Secondary action 1",
+        onClick: function noRefCheck() {},
+      },
+    ]}
+  />
+  <SplitButton
+    size="lg"
+    destructiveAction={{
+      iconName: "trash",
+      label: "Destructive action",
+      onClick: function noRefCheck() {},
+    }}
+    primaryAction={{
+      iconName: "plus-thick",
+      label: "Put primary action name here",
+      onClick: function noRefCheck() {},
+    }}
+    secondaryActions={[
+      {
+        iconName: "edit",
+        label: "Secondary action 1",
+        onClick: function noRefCheck() {},
+      },
+    ]}
+  />
+
+</SbExample>
+
+### Behaviour
+
+The list of secondary actions differs from a dropdown in that each value/choice is its own action, not a "selectable" choice which needs to be confirmed.
+
+The list section is to the right of the action button. The list can be opened above or below the button and may overflow to either side of the button width, based on where the button is placed on the screen or in the flow.
+
+<TwoColGrid>
+
+:::danger Don't
+
+- A few secondary options potentially creates layout problems
+
+:::
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3dNASwqNXrYbGQyHsf1Sgg%2FComponents%253A-Bright-UI%3Fnode-id%3D7783%253A28620%26t%3Dcs6zfnq43vB8k6wV-1"
+  height="300"
+/>
+
+</TwoColGrid>
+
+<TwoColGrid>
+
+:::tip Do
+
+- Split buttons resolve layout issues of multiple secondary options
+
+:::
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3dNASwqNXrYbGQyHsf1Sgg%2FComponents%253A-Bright-UI%3Fnode-id%3D7783%253A28675%26t%3Dcs6zfnq43vB8k6wV-1"
+  height="400"
+/>
+
+</TwoColGrid>
+
+#### Mobile
+
+If one button, use the full width of the screen (with margins). The list part of the component (the part containing the chevron) keeps its size, while the button part fills out the width.
+
+When the button’s width fills the screen the list of actions should have the same width.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3dNASwqNXrYbGQyHsf1Sgg%2FComponents%253A-Bright-UI%3Fnode-id%3D7783%253A28731%26t%3Dcs6zfnq43vB8k6wV-1"
+  height="500"
+/>
+
+<TwoColGrid>
+
+:::tip Do
+
+- Choose what action is in the first, unopened button based on either it being a "base" variant of several similar actions, or on it being the most commonly used choice by the users.
+
+:::
+
+:::danger Don't
+
+- Avoid more than one split button in each flow.
+
+:::
+
+</TwoColGrid>
+
+### Content
+
+:::note TODO
+
+Write content recommendations
+
+:::
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+
+<SplitButtonReadme />
+
+  </TabItem>
+</Tabs>

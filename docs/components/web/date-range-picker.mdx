@@ -1,0 +1,61 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SbExample from "@site/src/components/SbExample";
+import DateRangePickerReadme from "@brighthr/daterangepicker/README.md";
+
+# Date Range Picker
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables a user to pick a period of consecutive days. Supports both choosing from a calendar and typing in numerical dates.
+
+### Structure
+
+- **Date** Displays the currently selected start and end dates (if any)
+- **Icon** Communicates that the type of the field is a date input
+
+<SbExample
+  title="Date range picker"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-daterangepicker"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/DateRangePicker"
+  iframeUrl="iframe.html?id=components-daterangepicker--no-date-selected&args="
+  height="550"
+/>
+
+### Guidelines
+
+#### When to use
+
+- Use the date range picker when the user needs to enter a period covering several consecutive days, either by selecting from a calendar or typing the date directly. Do not use separate individual date fields if the user needs to enter a range.
+
+#### When not to use
+
+- If the user can enter a start date without an end date, or an end date without a start date, use two separate date fields instead.
+
+#### Territory variations
+
+- For Canadian users, ensure the date picker displays using the YYYY/MM/DD format.
+
+### Content
+
+#### Default values
+
+- Set the default date for the calendar to today, unless you have a specific reason for another date being more likely to be appropriate
+
+#### Limiting acceptable dates
+
+- If the selecting of some dates (e.g. dates before today) will result in an error, prevent selection of those invalid dates within the calendar control. However, if there is likely to be any doubt about why those dates are unavailable, do not limit dates in the control and use an error with explanatory text instead.
+
+### Accessibility
+
+- Always ensure that the date range picker control can accept keyboard input, and not rely entirely on interaction with the calendar control.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+    <DateRangePickerReadme />
+
+  </TabItem>
+</Tabs>

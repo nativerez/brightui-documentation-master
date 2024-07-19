@@ -1,0 +1,81 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import TextAreaReadme from '@brighthr/component-textarea/README.md'
+
+# Text area
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+A text area allows a larger amount of text to be entered and viewed: more than a single line.
+
+### Structure
+
+- **Label** Provides a clear description of what users should fill in
+- **Description** Optionally, provides more information or context about appropriate content for the text area
+- **Counter** Optionally, a nunber showing how many characters have been entered and the maximum number of characters allowed in the field
+
+<SbExample
+  title="Text area"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-textarea/"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Textarea"
+  iframeUrl="iframe.html?id=components-textarea--basic&args="
+  height="400"
+/>
+
+### Guidelines
+
+#### When to use
+
+- Use when the expected input could be more than one line
+
+#### When not to use
+
+- Don’t use where one line of text is expected
+
+### Behaviour
+
+#### Max lengths and using the couunter
+
+Set a max character length for the text area if there is a good reason to do so. Where you do, ensure that the length set is long enough to enable users to enter relevant information without artificial constraint.
+
+If you set a maximum length, show the counter.
+
+#### Validation on max length
+
+Setting a max length & validating afterwards enables users to copy/paste into the field from other sources, or type freely withot constraint and then edit afterwards if necessary. When the maximum character length is exceeded, set the field into an error state with an appropriate label.
+
+#### Height of the field
+
+Set the default height of the field so that (given the expected amount of text is entered) all of the text is visible without scrolling within the text area. If more text that this is entered, allow the field to grow vertically so that all the text is displayed, but set a limit for the maximum height to avoid the field excessivley distrupting the overall view.
+
+### Content
+
+For the label, use short descriptive phrases, ideally nouns that make the request clear. See our vocabulary document on confluence for some examples.
+
+When you have additional information or helpful examples, include description text to help users along. Remember that description text is visually less important and lower in contrast, so do not include anything _necessary_ to complete the field.
+
+### Accessibility
+
+Accessibility
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <TextAreaReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+

@@ -1,0 +1,82 @@
+---
+---
+
+# Loading states
+
+Loading states are a good opportunity to set expectations of users in your product. They can be used as a communication device to reduce uncertainty for the user by explaining what’s happening or preparing them for what’s coming up next.
+
+As one of the original 10 heuristics for web usability, visibility of system status remains among the most important and universally applicable principles in user-interface design. The goal is to provide the user with feedback about what is happening with the system or interface, within a reasonable amount of time
+
+#### Controlling the perception of time
+
+A good way to approach loading states is to think of them as a way to play with users’ perception of time and turn it to your advantage.
+
+In the world of loading patterns, there are basically two types of loading indicators that serve a variety of use cases.
+
+**Determinate** progress indicators communicate a sense of duration. They have a start point and an end point. They give users more information on how much time they can expect to wait.
+
+**Indeterminate** progress indicators have an uncertain duration. A common example is a looping animation, or a spinner. They are less informative, but are sometimes inevitable.
+
+### Deciding on your logic
+
+You will need to spend time understanding how to best marry your data structure and your users’ expectations to figure out the logic of your page rendering. Loading states can be passive or active, and depending on the scope of those two factors, you want to design an appropriate feedback experience.
+
+**Passive loading** is when the system is loading stuff upfront. Such as when the system first loads a data-heavy page, opens a file, or displays search results.
+
+**Active loading** states are when the system is responding to a user-triggered action. Such as when they publish newly input data, export a large file, or run an automated task. (Actions might include a loading button (or read more button), scrolling in the content area etc).
+The scope depends on the amount of data being processed and consequently, the perceived importance of the task.
+
+### Core principles
+
+- Show content as soon as possible
+- Clearly communicate that loading and how long it might take to complete.
+- Always give immediate feedback right after receiving the request, unless the load is under 0.1 seconds
+- For waits longer than 2 seconds, we should consider the context. If full page use a skeleton with shimmer animation (if indeterminate)
+- For waits longer than 10 seconds, we should aim to keep users in their workflow and give them feedback on the loading progress. For example, bulk uploads.
+- Don’t use static loading messages, make sure they are dynamic and contextual
+- Intederminate page loads longer than 'x' should have a time out and refresh option
+
+### Loading UI patterns
+
+#### Looped indicator (current)
+
+Use only for fast actions. Full page loading spinners should be avoided if it's possible, as they provide no sense of progress - especially because they are looped and indeterminate. If you are aware that the task at hand is going to take more than a few milliseconds, consider using another loading pattern.
+
+However, spinners can work well on a smaller scale. You can use it for more concise components like the contents of a table row or on a button after it’s just been clicked.
+
+Use either the [spinner](../components/web/spinner) for sub-page level progress, or the [Xingloader](../components/web/xingloader) if you need indetermindate progress at a page-level.
+
+#### Progress bar (current)
+
+Progress bars are a go-to and they are determinate. They work well both inside components as well as at the page level.
+
+We currently only have a BrightUI progress bar as part of the [File selector](../components/web/file-selector) component.
+
+#### Time indicator (current)
+
+On the development side of things, it’s hard to estimate loading times precisely in minutes and seconds. You also don’t want to set expectations you can’t guarantee you’ll meet. Instead, go with something general like “This can take a few minutes” just to set expectations and let the user decide how to handle their time.
+
+We currently only have a BrightUI time indicator as part of the [File selector](../components/web/file-selector) component.
+
+#### Percentage done indicator (current)
+
+Like a timed indicator, a percentage gives the user an accurate representation of how an action is progressing. This should be at the component level i.e file uploads. It is more effective than a spinner which doesnt give accurate system status for specific use cases such as uploading or downloading data.
+
+We currently only have a BrightUI percentage done indicator as part of the [File selector](../components/web/file-selector) component.
+
+#### Image loading (current)
+
+This can coincide with other elements on a page and we dont want to wait for an image to load to display content. In this case we either display the content without the image whilst it renders, or we can utilise techniques such as gradual image load where the image renders in quality until it is displayed.
+
+#### Table loading (current)
+
+How large is the data we are displaying? The volume of the data should dictate how it loads and effectivley influence the design decision in the immediate UI for things like lazy loading, pagination. Determining how to show the data in the table as it loads needs to be a consistent pattern, we should do this by populating the list one item at a time as it completes a load to give the user a shorter wait time to display some data.
+
+### Usage guidance
+
+| UI element/pattern                                | How to use                                                                                           | Why                                                                                                                                               | Use case example                                                                                                                                  | Time guide                    |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **Looped indicator** (indetermindate) (active)    | Individual component or page level                                                                   | User is hyper aware of whats in progress on the screen at element level                                                                           | When loading is localized at the component level i.e Loading spinner on files uploading, or progress cannot be determined when loading a page     | Above 1s at a component level |
+| **Progress bar** (determinate) (active)           | Page or component level- top of page or even cards/other components at individual level              | Acts as a signal that something is happening                                                                                                      | When you have less visibility on exact duration but want something to visualize progress                                                          | Between 2-10 seconds          |
+| **Time indicator** (determinate) (active)         | Usually component level, can be page if a user action has been taken that requires full page change. | Gives the user an estimate of how long the loading will take, and is more informitive in aiding the decision point for their actions in this time | When you can accurately estimate the duration ie. uploading a file- might add a progress bar on component with time badge that updates as loading | Between 2-10 seconds          |
+| **Percent done indicator** (determinate) (active) | Component level- inline or even a modal at individual level                                          | Shows more accurate progress with numbers, consider using for longer waits where a bar/spinner is not specific enough                             | When you can meaningfully predict the progress of a process- ie wetransfer file upload                                                            | 10 seconds and over           |

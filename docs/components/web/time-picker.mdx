@@ -1,0 +1,71 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import TimePickerReadme from '@brighthr/component-timepicker/README.md'
+
+# Time Picker
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Time Picker is an input field for entering or selecting a specific time.
+
+### Structure
+
+- **Label:** Labels should indicate what information the field requires. The label is left-aligned above the input area.
+- **Time input field:** Selecting this field opens the select menu showing available times on the selected date. Once a time is selected, the option will be shown in the text input. This example shows time formatted in AM/PM but this can be customized using the timeFormat prop.
+- **Time dropdown:** Contains the list of all selectable times. This example shows time increments of 30 minutes but can be customized using the times prop.
+
+### Guidelines
+
+The time can be entered directly using a keyboard or by choosing a value from a set of predefined options presented in an overlay. The overlay opens when the field is clicked or any input is entered when the field is focused.
+
+#### When to use
+
+- Use Time Picker when the user needs to choose a time of day.
+
+#### When not to use
+
+- Don’t use it for durations, such as for a stopwatch or timer.
+
+### Behaviour
+
+#### Time formats
+
+TimePicker supports customising the format of times. Formats are given as strings and use the syntax specified at Modern JavaScript Date Utility Library.
+
+`timeFormat` determined how times are formatted.
+Where possible use locale for time formatting, instead of a custom format.
+
+Time formats should be informed by the user’s locale and the use case.
+
+#### Validation
+
+##### Min and Max Values
+
+You can define a `min` and `max` value for Time Picker if you need to restrict the input to a specific range:
+
+### Content
+
+- Ensure that locale is appropriately set so that users see times in a familiar format.
+- If helper text is necessary, place helper text below the input.
+- Use a concise label to indicate what the time selection refers to.
+
+### Accessibility
+
+Label attributes for screen readers should be included for users who use screen readers to understand what the time picker relates to.
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <TimePickerReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+

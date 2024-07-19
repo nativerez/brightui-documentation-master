@@ -1,0 +1,42 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Bottom sheet menu
+
+A bottom sheet is useful modal for requesting specific information from users or presenting a simple task that they can complete before returning to the parent view.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D416%253A13517%26mode%3Ddesign%26t%3D30Mz5QJtV6aJnPWa-1"
+  height="600"
+/>
+
+### Structure 
+
+- **Bottom Sheet**: A container that appears at the bottom of the screen and contains various sections or options.
+- **Header**: A Header to desicribe the child elements within the bottom sheet.
+- **Dismiss**: Users have the option to dismiss the bottom sheet.
+
+### Guidelines
+
+#### When to use 
+Use a bottom sheet to organize and present related content or options that are not required to be displayed together on a single page.
+
+#### When not to use 
+
+- Avoid using a bottom sheet to organize unrelated content or options. Instead, consider using separate pages or sections within the app.
+- Avoid using a bottom sheet for content that needs to be viewed together. In such cases, an accordion or another suitable component may be more appropriate.
+
+### Behaviour 
+
+- A bottom sheet is a modal and creates a a focus experience for users. 
+- A bottom sheet slides out from the bottom of the screen in 3000ms but does not cover the entire screen. A sheet allows some of the parent view to remain visible, helping people retain their original context as they interact with the sheet.
+- Child elements can be passed into the body of the bottom sheet. These child elements must conform to the guidelines set out in this documentation.
+- Users can dismiss the bottom sheet by tapping the 'dismiss' action, or by tapping out of the modal area.
+
+### Content 
+
+#### Keep it short and clear
+
+Mobile devices have limited screen estate, the name of a bottom sheet should be both short to avoid using unnecessary space & clear so the user can understand the type of content contained within the bottom sheet. 

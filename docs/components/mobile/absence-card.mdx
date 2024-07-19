@@ -1,0 +1,89 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Absence card
+
+Organises information in relation to a type of absence
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D2539%253A2438%26mode%3Ddesign%26t%3DSXM9vTwppmVXvL6Y-1"
+  height="600"
+/>
+
+### Structure
+
+#### Header:
+
+- **Icon** (true/false)
+- **Title** (true/false)
+- **Duration**
+- **Badge**
+- **Button link**
+
+#### History (max 2):
+
+- **Description**
+- **Duration**
+- **Dates**
+
+### Guidelines
+
+#### When to use
+
+Absence cards are used to display a quick view of recent absences. There are three types of absences displayed in these cards.
+
+- Annual leave (including public holidays)
+- Sickness
+- Lateness
+
+There is a fourth variant of 'other' for which any of the absence types below will appear in as a history.
+
+- Adoption
+- Antenatal leave
+- Bereavement leave
+- Compassionate leave
+- Dental appointment
+- Lateness
+- Maternity leave
+- Parental bereavement leave
+- Parental leave
+- Paternity leave
+- Self-isolation
+- Shared parental leave
+- Time off for dependants
+- Time off in lieu
+- Training / events
+- Unpaid leave
+
+For overtime and time off in lieu; no histories are shown, instead use the structure of an absence card header but without a badge or button link.
+
+#### When not to use
+
+Do not use these cards outside of a user's profile.
+
+### Behaviour
+
+#### Use icons to differentiate
+
+Please ensure each absence card variant uses the correct icon to help differentiate them easily.
+
+| Absence type | Icon |
+| -------- | -------- |
+| Annual leave | [sun] |
+| Sickness | [plaster] |
+| Lateness | [chair] |
+| Other | [clock] |
+
+#### Tappable areas
+
+The button link inside the header is not the only tappable area for an absence card. Each history is seperately tappable, aswell as the whole of the header, outside of the button link.
+
+#### Communicate number of total histories of absence
+
+Each card displays a maximum of two absence types as histories within the card. If there are more than two histories of an absence in total; this can be indicated by the use of the **badge** component to communicate a total of this absence type to the user. Users must use the 'see all' button link to view a list of any remaining histories.
+
+#### Accessibility
+
+: TO DO :

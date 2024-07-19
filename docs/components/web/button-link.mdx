@@ -1,0 +1,120 @@
+---
+sidebar_label: Button Link
+---
+
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Link from "@brighthr/component-link";
+import LinkReadme from "@brighthr/component-link/README.md";
+
+# Button Link
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Displays a single, less important action a user can take.
+
+### Structure
+
+- **Text:** Conveys the action message relevant to the button.
+- **Icon** (optional): Supports or directly communicates the text, can be left or right aligned.
+
+<SbExample
+  title="Primary button"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-link--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Link"
+  showLinks
+>
+  <Link text="Link title" />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- To offer less important actions users can take.
+- To show many possible actions at once.
+- When the action is navigation inside the current app.
+- If it involves an interaction (like opening a modal or submitting a form).
+- With short action text.
+
+#### When not to use
+
+- When you have a single action you want to draw attention to—use a [button](./button).
+- To make text inside paragraphs or lists actionable—use a text link.
+- For navigation to external sites and services—use a text link.
+- With a long call to action—use a text link.
+
+#### Use apart from text
+
+Button links have extra spacing built into them so that they present a large enough target size to be usable on smaller screens. So they have different heights than text and using them in a paragraph would cause visual misalignment.
+
+Use button links only as stand-alone elements. The extra space around them also helps show they’re connected to an action. If you need links aligned with text, use text links.
+
+### Content
+
+#### Use actionable text
+
+It should be clear from the button text exactly what happens when the user interacts with it. The labels should be actionable, such as “Add employee(s)” and “Save Report“.
+
+Avoid long explanations in the button text. The text should be short and clear. If additional explanation is needed, add it above the button as text.
+
+#### Button links with icons
+
+Button links with icons are great when you need to draw more attention to the action. Icons add additional context and makes the button link easier to scan.
+
+Whilst it’s essential to not overuse icons within buttons links, they can be used more frequently here than within [Buttons](./button). Do keep in mind, that if everything is grabbing attention, things usually get messy.
+
+:::tip Use link colours for icons
+
+An icon should be the same color as the button link it is next to to ensure consistency and visual coherence.
+
+:::
+
+:::tip Use left icons to add context
+
+This can help to give the user visual clarity, by clearly communicating the purpose or action of the button link.
+
+:::
+
+:::tip Use right icons when the button is an external link or directional.
+
+They can help explain what happens when the user interacts with the button. An icon (with an aria-label) makes it easier to know if the user is taken elsewhere. For cases like this, use the NewWindow icon and ensure the user is being taken away from site using a new tab (target="\_blank"}.
+
+:::
+
+:::tip Add a label when using icon-only buttons
+
+Even the simplest icons like plus can be understood in many different ways. To make sure your icon is accessible, add a proper label to communicate the purpose.
+
+:::
+
+### Accessibility
+
+#### Keyboard navigation considerations:
+
+- Links must be keyboard accessible via the Tab key, show a clear indication when it is selected and actioned by pressing the Enter key.
+- The contrast ratio of focus indicators and the background must be at least 3:1
+
+#### Screen reader considerations:
+
+- If you are linking to something from an image or icon, supply a title attribute to give people who use screen readers some context.
+- Don't include the word 'Link' in your link. Screen readers tell the user when they encounter a link, so you don’t need to do this.
+- Indicate when a link activates a download and include this in the link text.
+
+#### Visual considerations:
+
+- Do not rely on colour alone to indicate links, links should be visually different from other elements on the screen. If other elements on the screen look similar to a link we should consider if those need changing in order to better represent the element's purpose.
+- The contrast ratio between the link and the background must be at least 4.5:1
+- If the link is embedded within a sentence, the contrast ratio between the link and the surrounding text must be at least 3:1
+- Users should be able to resize text links up to 200%.
+
+</TabItem>
+
+<TabItem value="react" label="React">
+
+<LinkReadme />
+
+</TabItem>
+</Tabs>

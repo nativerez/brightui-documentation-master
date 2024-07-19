@@ -1,0 +1,54 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Accordion
+
+Groups related long content into sections shown one at a time.
+
+# Alert
+
+Breaks the main user flow to present information.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D416%253A13484%26mode%3Ddesign%26t%3DL1S6uSkLrYHzSLTM-1"
+  height="600"
+/>
+
+### Structure
+
+- Caret: Identifies when the accordion is open or closed. Pointing up in open. Pointing down is closed.
+- Title: Identifies the title of the accordion.
+- Status Badge: Indicates how many items are inside the accordion.
+
+### Guidelines
+
+#### When to use
+
+- You have long sections of content with similar structure, such as employees within teams.
+- You want to show only one section at a time (to keep users from being overwhelmed to support progressive disclosure).
+
+#### When not to use
+
+- You want to display all content on the screen at once—use a card.
+- Each section has a single associated action—use a tile.
+- The information to hide is simple and doesn’t have a repeating structure—use a collapse.
+
+### Behaviour
+
+- Opening an accordion will exapand to show information within it. Information will open below the title.
+- Screen scroll position is saved when opening an accordion.
+
+### Accessibility
+
+_Screen reader considerations:_
+
+The accordian title should have a label to indicate that it can be clicked to open.
+
+_Visual considerations:_
+
+The contrast ratio between text on the accordian and the background must be at least 4.5:1.
+Users should be able to resize the accordian up to 200%.
+chevron icon must always changed from up for open and down for closed.
+Accordian must have a minimum tappable area of 44px.

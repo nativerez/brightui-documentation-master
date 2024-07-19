@@ -1,0 +1,64 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import NavigationReadme from "@brighthr/component-navigation/README.md";
+
+# Nav bar
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+The nav bar enables us to provide application-level navigation on web. It persists across all pages on applications where it is used.
+
+### Structure
+
+- **Bar** The background on the nav bar. Scrollable if there are more items in the bar than fit in the viewport
+- **Buttons** Navigation buttons, containing an icon and a label. Interacting with the button either navigates to that area of the application or opens a navigation sub-menu
+- **Menu** Optionally, a flyout menu launched by interacting with a navigation button, containing secondary level navigation
+
+<SbExample
+  title="Nav bar"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-navigation--example-menu"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Navigation"
+  iframeUrl="iframe.html?id=components-navigation--example-menu&args="
+  height="600"
+/>
+
+### Guidelines
+
+#### When to use
+
+- Use as the main navigation method in the scope of a whole application, where there are multiple distict areas for a user to move between
+
+#### When not to use
+
+- Never use the nav bar as secondary navigation (i.e. in situations where there is alternative top-level navigation present)
+- Do not use the nav bar if there is only one distinct area in the application. If there are a small number of areas, consider carefully whether there are other alternatives for organising the application without using the nav bar
+
+### Content
+
+#### Icons
+
+- All buttons/links in the nav bar must have an icon. Make sure you [check our list of icons](./icon), and use a consistent icon/concept.
+
+#### Labels
+
+- All buttons/links in the nav bar must have a label. Favour labels that fit on a single row wherever possible.
+
+#### Navigation sub-menus
+
+- Use a sub-menu when there is more than distinct one page within a single area, and those pages are at the same level of the hierarchy. Consider whether those pages should be collated in a way that enables them to be used together or be summarised in a top-level destination before defaulting immediately to a sub-menu.
+
+### Accessibility
+
+- Ensure that the current selection of the nav bar, and the currently focussed nav bar item, are both clearly visible and distinct
+- The nav bar must be navigable using the keyboard, and not require a pointing device/touch.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<NavigationReadme />
+
+  </TabItem>
+</Tabs>

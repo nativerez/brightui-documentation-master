@@ -1,0 +1,138 @@
+---
+---
+
+import DoDontImages from '@site/src/components/DoDontImages';
+import SbExample from '@site/src/components/SbExample';
+
+# Badges
+
+Presents users with short, relevant information. Often this information should be important & distinguished from the rest of the display.
+
+### Structure
+
+- **Container:** Wraps the content.
+- **Marker:** Indicates that the badge relates to a status.
+- **Icon** (optional): Supports or directly communicates the metadata meaning, always left aligned.
+- **Text** (optional): Conveys and supports the meaning or other attribute of the metadata.
+
+### Guidelines
+
+#### When to use
+
+- To call attention to details in a way that makes it easy to scan.
+- To present information, such as status, category or quantity of inormation in a section.
+- When items need to be differentiated from each other.
+
+#### When not to use
+
+- If the entire message has an associated action—use an alert.
+- For a call to action, use a button instead.
+- If the indicator can be removed or replaces, use a tag instead.
+
+#### Colour Variants
+
+- Default/Neutral
+  - Colours: Grey colour ramp
+  - Meaning: Can pertain to a default piece of information that we dont want a colour to distort meaning against.
+- Information
+  - Colours: Blue colour ramp
+  - Meaning: Conveys informative messages with a blue background
+- Success
+  - Colours: Green colour ramp
+  - Meaning: Provides positive or success feedback
+- Warning
+  - Colours: Orange colour ramp
+  - Meaning: Warns users that they need to take notice
+- Light Warning
+  - Colours: Yellow colour ramp
+  - Meaning: Warns users that they need to take notice, but to a less sever degree than yellow marker
+- Criticial/Error
+  - Colours: Red colour ramp
+  - Meaning: Provides negative feedback or error messaging
+
+#### Properties
+
+- Sizes: XS / Sm / Base / Lg (should be considered in the layout with space available, these sizes should be consistent in similar areas of the product. We wouldnt use different sizes for the same badge function on the same feature page)
+- Status marker: On/Off (Status marker indicates something is is in a process which could have distinct stages or phases that they go through)
+- Icon: Leading/Trailing (Used to support the messaging in the badge, and differentiate when colours and type are not enough)
+- Uppercase / Lowercase (Uppercase is used for something that may require to capture more immediate attention of the user)
+- Background: Default, dark, light, white. (It is not recommended to mix emphasis without intention, and designers should consider doing so only where it serves to improve user understanding.)
+
+#### Use cases
+
+** Status badges **
+
+##### Prop: With Flicker
+
+Status badges utilise the marker property to signify that something in product is in a live state which is operational. It is used to represent a 'live' action such as a delegated session.
+Example: BrightSafe delegatoin bar. Indicating a user is within a live delegation session with the blinking marker.
+
+##### Prop: Static marker
+
+Status badges utilise the marker property to signify that something in product is in a state that may change with action, or over time. It is used to represent a 'living' part of the product... such as a report & its completion status.
+Example: BrightSafe Learning management. Indicates a status on a course- so a course has been assigned and it is currently in to-do status, which means it requires action from the user to change status.
+Example: Absence request can display if they have been approved or not.
+
+** Badges **
+
+A badge can be used for many different reasons in product, a few are listed below.
+
+- To indicate grouping or a type of elements
+- To give more prominence to a certain element on the display
+
+Example: BrightSafe e-learning courses. To denote a card belongs to e-learning feature and the information it holds relates to this.
+Example: BrightHR uses badges as counter on tabs in various places, to draw more attention to a tab.
+Example: Absence request can display if they have been approved or not.
+
+##### Numbered badges
+
+Numbered badges are used to indicate the quantity of items. For example this can be used in an accordian to indicate the number of items that will appear when an accordian is opened.
+
+These badges are not the same as notification badges and do not disappear when content has been viewed. Numbered badges should always be neutral or info variants and none of the other variants listed under badge colours.
+
+### Look & Feel
+
+#### Badge types
+
+There are six basic types of badges. All except white badges have an inverted variant for use with different backgrounds.
+
+##### Neutral badges
+
+Neutral badges present information without adding any emotion. They’re useful when the information isn’t so important to the user’s main flow.
+
+##### White badges
+
+White badges are useful when presenting neutral information within a dark context.
+
+##### Info badges
+
+Informational badges help to highlight some information as particularly important. They draw attention to the badge without stating whether it was positive or a potential problem.
+
+##### Success badges
+
+Success badges help to highlight something desirable has happened or will happen. You can use them in situations like a confirmation of a user action (such as published job in TTN or paid status in PoP).
+
+##### Warning badges
+
+Warning badges highlight information that might have a negative impact on the user but isn’t critical. They’re associated with negative emotions so only use them occasionally to stop potential problems before they happen.
+
+##### Critical/Error badges
+
+Critical badges call attention to problems that require immediate attention from the user. These badges create feelings of stress so only use them for issues where they’re truly necessary.
+
+### Accessibility
+
+:::note ** A badge’s meaning should not be communicated by colour alone **
+
+Support the meaning of a badge with appropriate text or an icon. This helps users who cannot see color, or who are using assistive technology.
+
+Any badge text must provide an indication of the status conveyed by the badge regardless of the color used. If using an accompanying icon,
+its meaning must be visually self-evident and commonly used in that context.
+
+:::
+
+:::note ** Ensure each badge meets the appropriate level of contrast **
+
+All badges added to the design system should meet the minimum required contrast ratio of 4:5:1 on all sizes.
+
+:::

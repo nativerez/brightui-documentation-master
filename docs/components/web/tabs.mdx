@@ -1,0 +1,122 @@
+import SbExample from '@site/src/components/SbExample';
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import TabReadme from '@brighthr/component-styled-tab/README.md'
+
+# Tabs
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Tabs divide content into meaningful, related sections.
+
+<SbExample
+  title="Styled Tabs - Horizontal"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-styledtab--four-tabs"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/StyledTab"
+  iframeUrl="iframe.html?id=components-styledtab--four-tabs&args="
+/>
+
+<SbExample
+  title="Styled Tabs - Vertical"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-styledtab--four-tabs&args=verticalAlignment:true"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/StyledTab"
+  iframeUrl="iframe.html?id=components-styledtab--four-tabs&args=verticalAlignment:true"
+/>
+
+### Structure
+
+- **Tab group:** Contains all tabs.
+- **Tab:** Contains text label and badge.
+- **Active indicator:** Highlights the active tab.
+- **Label:** Text representing the content of the tab panel.
+- **Badge (optional):** Counts the number of items, or number of items needing action,  within the tab panel
+- **Dropdown indicator:** Chevron that appears on the right side of the tab group when the combined tab width is greater than the tab group width. Enables scrolling to view tabs that aren't immediately visible.
+- **Tab panel:** Contains the content related to the active tab.
+
+### Guidelines
+
+#### When to use
+
+To show one content section at a time while maintaining a view of related options.
+
+#### When not to use
+
+- If content from multiple tabs should be viewed at the same time, consider using an [accordion](./accordion) instead.
+- Avoid confusing tabs with navigation. Tabs help users remain in the same context; use navigation for changing context.
+
+#### Vertical vs. horizontal tabs
+
+- Prefer horizontal tabs, unless there are many tabs or their labels must be long
+- Use vertical tabs if there are many tabs, or tabs with long labels
+
+### Behaviour
+
+- A tab reveals its associated content (tab panel) when activated.
+- Only one tab can be active at a given time.
+- Tabs may be nested with a maximum nesting of two levels. This pattern should only be considered as a last resort due to the complexity it creates both in code and for the user experience.
+- Each tab at the parent level should have its own unique URL. When determining whether to implement unique URLs for child tabs, consider whether or not a user would want to bookmark or link to the tabbed content.
+
+### Content
+
+#### Keep content similar
+
+Tabs make sense when the content they contain is related. That includes categories within a list, one specific task, and parts of a user profile.
+
+Don’t use tabs when the content isn’t related. Make sure it all makes sense within the overall context.
+
+#### Make content clear
+
+Users want to know what each tab contains before they switch to it.
+
+Tab labels should clearly and succinctly describe the content of the tab they represent. Tab content should contain a cohesive set of items that share a common characteristic. Use short, clear names to set clear expectations. Aim for a single word when possible.
+
+Tab labels should be nouns - the name for the content that is in the tab - and not verbs.
+
+Tab labels appear in a single row. They can use a second line if needed, with truncated text. Alternatively, you can use scrollable tabs to allow room for longer titles.
+
+<TwoColGrid>
+
+:::tip Do
+
+- Employees, Manage Teams, Who's in
+- Absence, Employment, Overtime
+
+:::
+
+:::danger Don't
+
+- List of employees, Manage all team settings, See who's in today
+- View Harry's Absences, User Employment, User Overtime
+
+:::
+
+</TwoColGrid>
+
+### Badges & counts
+
+Badges containing a count can optionally be used on a tab to indicate a number of items within that tab panel. This can be useful to give context to the contents of a panel that isn't currently being displayed.
+
+When using a badge, use a background colour of either
+- Primary colour (Primary-700) if the count is of all items in the list
+- Action colour (Accent-500) if the count is of items that require action/attention
+
+### Accessibility
+
+Tabs must be keyboard accessible, with a sensible tab order to enable users to move between selections. The current selection must be clearly indicated.
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <TabReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+
+

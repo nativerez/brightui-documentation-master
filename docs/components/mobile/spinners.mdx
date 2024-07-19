@@ -1,0 +1,42 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Spinners
+
+A spinner is an animated indicator to inform users that a task or page is loading. This helps to maintain user engagement and prevent frustration during wait times. Other types of loading progress indicators for mobile include skeleton states. 
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D1890%253A1778%26mode%3Ddesign%26t%3Dc24zpfL9NwVt21OB-1"
+  height="600"
+/>
+
+### Structure
+
+A circular track that fills itself clockwise.
+
+### Guidelines
+
+#### When to use
+
+- When a page is loading, show a spinner to show the task of running the page ( or task) is active and the app hasn't frozen.
+- Start the spinner when a task has or is loading. Stop as soon as all content is fully loaded.
+- When you wish to communicate to a user that an asynchronous task with an unquantifiable ending is occurring (such as loading a page).
+
+#### When not to use
+
+- Do not use for specific component interactions. Such as loading images/icons inside a card or inside button boundaries after being tapped and in an active state.
+- Do not use on the starting page of a task or journey (always continue on from a users tapping of a button and display the spinner as the new page loads).
+- Do not use to communicate the progress of a determinate task with a well-defined duration (such as file conversions). Instead, use a progress indicator.
+
+### Behaviour
+
+- Keep all spinners generic and do not use additional text such as 'loading' or 'please wait'.
+- Ensure that the spinners have a consistent size, weight and colour throughout the app to achieve a recognisable pattern.
+- Block user interaction with elements on the page when a spinner is present.
+
+#### Accessibility
+
+- Ensure the spinner has suitable alt text for screen readers to describe the spinner's purpose.
+- Ensure the spinner has an appropriate contrast to the page background.

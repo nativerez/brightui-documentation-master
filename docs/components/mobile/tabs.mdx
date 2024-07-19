@@ -1,0 +1,51 @@
+---
+---
+
+import FigmaExample from "@site/src/components/FigmaExample";
+
+# Tabs
+
+Tabs provide a way to manage and navigate between sections within our app.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D23%253A396%26mode%3Ddesign%26t%3DeiUsBcdoTOCRD0np-1"
+  height="600"
+/>
+
+### Structure
+
+- **Tab**: Contains the text label and optional icon.
+- **Tab Row**: Contains a group of Tabs.
+- **Label**: This represents the content within the tab. It should be short and clear, with a maximum of 12 characters.
+- **Active indicator**: A line which highlights the tab the user is presently viewing.
+
+### Guidelines
+
+#### When to use
+
+Use a tabs to help organise content that is related, but does not need to be viewed together in a single page.
+
+#### When not to use
+
+- Don't use tabs to organise unrelated content in a single page, consider making these into separate pages or sections of the app.
+- Don't use tabs for content that needs to be viewed together, consider using an accordion.
+
+### Behaviour
+
+- Only one tab can be active at any time.
+- A tab displays its content when tapped & changes to an active state.
+- All tabs shall display as an equal size & not be relevant to text size.
+  - This means, a screen should show 2 or 3 tabs at full width of the device.
+  - When above 4 or more tabs within a tab row, the tab size shall shrink to hug the label.
+  - If a screen has 4 or more tabs within a tab row, the tabs will be horizontally scrollable.
+  - When the tabs are scrollable, this will be displayed to the user through a design prompt. (prompt tbc)
+
+### Content
+
+#### Keep it short and clear
+
+Mobile devices have limited screen estate, the name of a tab should be both short to avoid using unnecessary space & clear so the user can understand the type of content contained within the tab.
+
+#### Make it intuitive
+
+Make sure you're using tabs to organise the information in a way the user would both understand and expect, where possible. Whilst tabs are not to be confused with navigation, this will make it easier for the user to find their way around the app.

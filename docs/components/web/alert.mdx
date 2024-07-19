@@ -1,0 +1,88 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import AlertReadme from "@brighthr/component-alert/README.md";
+
+# Alert
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Breaks the main user flow to present information.
+
+### Structure
+
+- **Icon:** Optionally supports the message
+- **Title:** Works best with 5 to 8 words
+- **Description:** Optionally provides more context for the message, ususally when the message is long
+- **Closable/Dismiss:** Optionally lets users close the message
+- **Checkbox:** Used to fire additional actions or prevent a user dismissing without taking action
+- **Actions:** Optionally adds related actions for users to take
+
+### Guidelines
+
+#### When to use
+
+- When you want to interrupt a user’s journey with relevant information.
+  For things like status messages and additional explanations.
+
+#### When not to use
+
+- When there are already many on the screen. Don’t overwhelm the user.
+- For messages that shouldn’t interrupt the flow—consider heading and text.
+- For temporary messages that don’t draw much attention—use a [Toast](./toast).
+- When no results match a user query—use an empty state.
+- When a user has to solve an issue as soon as possible—use a modal.
+
+##### Variants
+
+- Information
+- Success
+- Warning
+- Error
+
+##### Sizes
+
+Available sizes: Large (with description), Small
+
+### Behaviour
+
+#### Use more than just color
+
+To maximize accessibility, make sure the message is clear from the content. Icons can also support the message.
+Color alone doesn't always distinguish different alert types.
+
+#### Use icons
+
+Without icons, people with color blindness might see success and critical alerts as the same.
+
+:::tip Do
+
+:::
+
+:::danger Don't
+
+:::
+
+#### Follow up with actions
+
+There are times when just simple information isn’t enough and the user needs to take additional steps to resolve the problem or get additional details.
+
+In such cases, provide additional actions for your message.
+
+Use at most two actions in each Alert: one primary and one subtle. See more on the styles of the buttons and how they should be aligned.
+
+### Accessibility
+
+- An Alert should receive focus and use aria-live to announce its presence and allow a user to interact with it immediately.
+- If sticky positioning is used, the user must still be able to access and view focusable elements the Alert may be covering.
+- An Alert is separate from, but complimentary to validation error messages. In this way an Alert announces that there are validation errors and links a user to each instance.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<AlertReadme />
+
+  </TabItem>
+</Tabs>

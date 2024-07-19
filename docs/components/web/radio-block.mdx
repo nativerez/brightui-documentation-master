@@ -1,0 +1,147 @@
+import SbExample from "@site/src/components/SbExample";
+import TwoColGrid from "@site/src/components/TwoColGrid";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import RadioBlock from "@brighthr/component-radio-block";
+import RadioBlockReadme from "@brighthr/component-radio-block/README.md";
+
+# Radio Block
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables users to pick exactly one option from a group.
+
+### Structure
+
+- **Radio Controller:** Indicates the state and can be selected or not.
+- **Label:** Describes the option being selected.
+- **Icon** (optional): Supports or directly communicates the text.
+- **Info Text:** Adds more explanation to the label. Can contain a link.
+
+<SbExample
+  title="Radio Block"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-radioblock--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/RadioBlock"
+  showLinks
+>
+
+<div className="flex flex-row gap-4">
+  <RadioBlock
+    alignContent="left"
+    badgeStatus="success"
+    badgeText=""
+    checked
+    description="Employees on a repeating working time pattern who work fixed, predictable numbers of hours every week and have a fixed leave entitlement."
+    iconName={null}
+    onChange={function noRefCheck(){}}
+    title="Fixed, full or part time"
+    value="First"
+  />
+  <RadioBlock
+    alignContent="left"
+    badgeStatus="success"
+    badgeText=""
+    description="Employees on a contract who work a different number of hours or days from week to week."
+    iconName={null}
+    onChange={function noRefCheck(){}}
+    title="Short hours or variable"
+    value="Second"
+  />
+</div>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- To present a few options where only one can be selected.
+
+#### When not to use
+
+- When you have many options - use a [Select](./select).
+- When multiple options can be selected - use a [Checkbox](./checkbox).
+- For single on/off settings with an instant response - use a switch.
+
+#### Regular vs Radio button styling
+
+- Prefer regular radios where there are many controls in a form, or where space is limited. If in doubt, use regular radio buttons.
+- Consider button-styling in more guided experiences (such as wizards) where there are few choices/controls on the form, and a more visually engaging experience may aid completion.
+
+##### Supporting icons
+
+Radio blocks support optional icons to aid comprehension. Icons should be used to support the text, not replace it. Icons should be used consistently across the product.
+
+<SbExample
+  title="Radio Blocks with icons"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-radioblock--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/RadioBlock"
+>
+
+<div className="flex flex-row gap-4">
+  <RadioBlock
+    alignContent="left"
+    badgeStatus="success"
+    badgeText=""
+    checked
+    description="Contrary to popular belief, Lorem Ipsum is not simply random text."
+    iconName="chair"
+    title="First choice"
+    value="First"
+  />
+  <RadioBlock
+    alignContent="left"
+    badgeStatus="success"
+    badgeText=""
+    description="Contrary to popular belief, Lorem Ipsum is not simply random text."
+    iconName="chair"
+    title="Second choice"
+    value="Second"
+  />
+</div>
+</SbExample>
+
+##### Alignment
+
+Radio blocks can be aligned both left and centered. Left aligned is the default.
+
+<SbExample
+  title="Center aligned Radio Blocks"
+  storyUrl="https://storybook.bright.hr/?path=/docs/components-radioblock--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/RadioBlock"
+>
+
+<div className="flex flex-row gap-4">
+  <RadioBlock
+    alignContent="center"
+    badgeStatus="success"
+    badgeText=""
+    checked
+    description="Contrary to popular belief, Lorem Ipsum is not simply random text."
+    iconName="chair"
+    title="First choice"
+    value="First"
+  />
+  <RadioBlock
+    alignContent="center"
+    badgeStatus="success"
+    badgeText=""
+    description="Contrary to popular belief, Lorem Ipsum is not simply random text."
+    iconName="chair"
+    title="Second choice"
+    value="Second"
+  />
+</div>
+</SbExample>
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <RadioBlockReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,93 @@
+import SbExample from "@site/src/components/SbExample";
+import TwoColGrid from "@site/src/components/TwoColGrid";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import Radio from "@brighthr/component-radio";
+import RadioReadme from "@brighthr/component-radio/README.md";
+
+# Radio
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables users to pick exactly one option from a group.
+
+### Structure
+
+- **Radio Controller:** Indicates the state and can be selected or not.
+- **Label:** Describes the option being selected.
+- **Info Text:** Adds more explanation to the label. Can contain a link.
+
+<SbExample
+  title="Radio"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-radio"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Radio"
+  showLinks
+>
+  <Radio
+    checked
+    description="{Optional description goes here}"
+    label="Label"
+    name="Storybook Radio"
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- To present a few options where only one can be selected.
+
+#### When not to use
+
+- When you have many options - use a [Select](./select).
+- When multiple options can be selected - use a [Checkbox](./checkbox).
+- For single on/off settings with an instant response - use a switch.
+
+#### Radio vs Radio Block styling
+
+The radio button can be styled as a button (AKA Radio Block). See [Radio Block](./radio-block) for more details.
+
+### Behaviour
+
+#### Support progressive disclosure of information
+
+While it makes sense to provide users with the information they need to make a good choice, providing them with too much information at once actually makes it harder to decide.
+
+So while you might be tempted to stuff everything into labels and additional info, you should try to use progressive disclosure. This means using text links and tooltips to keep info hidden but close by.
+
+<TwoColGrid>
+
+:::tip Do
+
+Present only absolutely necessary information with interactions to offer more.
+
+:::
+
+:::danger Don't
+
+Don’t overwhelm users with too much information at once.
+
+:::
+
+</TwoColGrid>
+
+#### Show multiple options, but not too many
+
+Radios force users to choose only one option. Make sure they’re always presented with two or more options. If you have many options to choose from, consider using a select to decrease the initial cognitive load on users.
+
+### Accessibility
+
+Radios are a standard control that should accept focus & selection using the keyboard, and make it clear which radio button in the group has focus & is selected.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <RadioReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

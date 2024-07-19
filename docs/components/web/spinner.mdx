@@ -1,0 +1,53 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import SpinnerReadme from '@brighthr/component-spinner/README.md'
+
+# Spinner
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Used to show indeterminate progress, especially at a sub-page level.
+
+### Structure
+
+- **Spinner** A looped indicator that indicates progress.
+
+<SbExample
+  title="Spinner"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-spinner"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Spinner"
+  iframeUrl="iframe.html?id=components-spinner--primary&args="
+/>
+
+### Guidelines
+
+For guidelines on when to use and when not to use, see the [Loading states](../../design-patterns/loading-states) design pattern
+
+#### Spinner vs. XingLoader
+
+Prefer the spinner for sub-page / component level indeterminate progress. For a full page inderderminate progress indicator, use the [Xingloader](./xingloader).
+
+### Accessibility
+
+:::
+
+TO DO
+
+:::
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <SpinnerReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+

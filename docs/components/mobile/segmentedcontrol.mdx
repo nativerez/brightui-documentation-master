@@ -1,0 +1,52 @@
+---
+---
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Segmented Controls 
+A segmented control offers users multiple choices via a linear set of two or more segments. 
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D23%253A395%26mode%3Ddesign%26t%3DP955atXoXa9txBpo-1"
+  height="600"
+/>
+
+### Structure 
+- **Segment**: A segment is similar to a button, it contains a label and/or optional icon. 
+- **Segmented control**: A segmented control contains two or more segments within a single line, all segments are equal in width.  
+- **Label**: This represents the content within the tab. This label should be be 14 characters or fewer. 
+- **Active Indicator**: The active segment will display as a button in Primary 700, with white text. Only one segment can be active at a time. 
+
+### Guidelines 
+
+#### When to use
+
+- Use Segmented controls to divide content closely related on a singular screen, allowing the user to easily switch between views. 
+- When the view can be divided into two or three segments. 
+
+#### When not to use
+
+- Don't use this to divide content that is not related to each other, consider putting these onto separate screens. 
+- Don't use segmented controls if the content needs to be viewed together, consider using accordions for this. 
+
+### Behaviour 
+
+- Only one segment can be active at any time. 
+- A segment displays its content when tapped & changes to an active state.
+- All segments shall display as an equal size. 
+- A segmented control should have no more than 2 or 3 segments. 
+- Segmented controls should span the full width of the screen (with the standard margin). 
+- The segmented control can switch views based on a tap or swipe motion. When the moving segment the 'active state' will display a slide animation as it moves to sit behind the correct segment. 
+- Some screen sizes will evoke the segment content to span across two lines. This will be centred vertically. 
+
+### Content
+
+#### Keep it consistent with icons or text 
+For each segment, use only icons or only text. Avoid using an icon for one segment & text for another, as this can lead to a confusing, disconnected interface. 
+
+#### Keep it short and clear 
+Mobile devices have limited screen estate, the name of a segment should be both short to avoid using unnecessary space & clear so the user can understand the type of content contained within the segment. 
+
+
+
+

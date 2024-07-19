@@ -1,0 +1,71 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import TooltipReadme from '@brighthr/component-tooltip/README.md'
+
+# Tooltip
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+A tooltip is used to give more context to a specific element in our product. It is a good way of giving more context and conveying meaning through additional text, without polluting the base page with copy.
+
+A tooltip can also be a good way to indicate what is expected next for clicking on a link
+
+At heart it adds more context to the original element conveyed. For example, an ion could have an explanation behind a tooltip, if space is not available on the original page.
+
+### Structure
+
+- Tooltips usually include a text and optional title. They have a background (Margin:x-24 y-16. Background colour:Neutral-700)
+
+### Guidelines
+
+#### When to use
+
+We use tooltips when more context is needed for a certain element in the UI, and we don't necessarily have the visual real estate on the current estate.
+
+#### When not to use
+
+WHen context on the original element is enough for users to understand. Or there is enough of a design judgement reason on the prior screen to include the context that may be hidden behind a tooltip.
+
+#### Properties
+
+ - ** Direction: ** Top, bottom, left, right (where the tooltip appears and is aligned.0 this should take into consideration different device sizes and whether important information would be hidden by the tooltip. )
+ - ** Text alignment: ** CENTERED, lEFT (THIS GIVES US THE ABILITY TO MOVE THE TOOLTIPS TEXT BASED ON DESIGNER PREFERENCE0)
+ - ** Size: ** Small, base (the small size is generally used based off the context it is around. So a smaller amount of copy probably dictates a larger tooltip, a large amount of copy will need to be condensed inside of the tooltip so can be done at a smaller size)
+
+#### Use cases
+
+Conveying more information than is required on the original display
+When the original display is already over-polluted with copy and explanation
+
+### Behaviour
+
+The tooltip will appear on cursor hover. 
+On mobile devices, the tooltip will not be available as hover capabilities are a non factor on mobile- we would use an information icon instead or convey more meaning on the smaller device
+
+### Look & Feel
+
+The tooltip should never be too large, there should be a character restriction of 50 characters. If the tooltip looks like it is exceeding this amount, consider using another ui element to communicate meaning.
+
+#### Heading with subtext
+Optional heading with subtext can be used to communicate meaning and more explanation behind what it means in the context of the product/situation.
+
+#### No heading
+Not all tooltips need headings; if sub text is enough to convey the message.
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <TooltipReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+
+

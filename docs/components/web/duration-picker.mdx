@@ -1,0 +1,88 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import DurationPicker from "@brighthr/component-durationpicker";
+import DurationPickerReadme from "@brighthr/component-durationpicker/README.md";
+
+# Duration Picker
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables a user to pick a duration for something (e.g. a shift, an absence) in hours and minutes.
+
+### Structure
+
+- **Hours input box** An input box for hours, with a stepper and unit placeholder
+- **Minutes input box** An input box for minutes, with a stepper and unit placeholder
+- **Stepper** Up and down arrow within each input box, with a configurable step
+
+<SbExample
+  title="Duration picker"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-durationpicker"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/DurationPicker"
+  showLinks
+>
+  <DurationPicker
+    max={{
+      hours: 8760,
+      minutes: 0,
+    }}
+    min={{
+      hours: 0,
+      minutes: 0,
+    }}
+    onChange={function noRefCheck() {}}
+    step={1}
+    value={{
+      hours: 9,
+      minutes: 30,
+    }}
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use when a duration in hours and minutes needs to be entered
+
+#### When not to use
+
+- Do not use to enter a specific time
+- Do not use to enter a span of dates (use [date ranger picker](./date-range-picker) instead)
+
+#### Defaults
+
+Set the default duration to a sensible default where possible. Otherwise, set it to 0 hours and 0 minutes.
+
+#### Steps
+
+The step with which the value in the input increments/decrements is configurable.
+
+- For hours, set it to 1 unless there is a compelling reason to do otherwise.
+- For minutes, set it to a value that is likely to be a sensible increment for this field - balancing the interaction required from using the stepper with the likely precision needed. If in doubt, set it to 5.
+
+### Behaviour
+
+#### Loss of focus
+
+On loss of focus, if more than 59 minutes are entered in the minute input, additional hours will automatically be added to the hours input, with the minutes reduced to the remainder.
+
+### Accessibility
+
+Both fields should accept keyboard focus, in order. It must be possible to type numbers directly into fields. The up/down arrows should increment/decrement the value as per the stepper.
+
+Placeholder text for hours/minutes must be sufficiently high contrast.
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <DurationPickerReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

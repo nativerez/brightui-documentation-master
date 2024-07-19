@@ -1,0 +1,46 @@
+---
+sidebar_label: 'Contributing'
+sidebar_position: 2
+---
+
+import TwoColGrid from '@site/src/components/TwoColGrid';
+
+# Contributing to BrightUI
+
+Ask yourself a few questions:​
+
+<TwoColGrid>
+
+:::tip When to contribute towards BrightUI​:
+
+- **Are your solutions repeatable?** If so, sharing them will help others work more efficiently and help make experiences feel more familiar. It will also open your solutions up to feedback — and help evolve your solutions.
+- **Will understanding how you solved a problem benefit other teams?** If so, sharing your solution will prevent other teams from spending time trying to solve the same problem.​​
+
+:::
+
+:::danger When to hold off from contributing:​
+
+- If something is unique to a specific context and scenario, perhaps it doesn’t need to be shared with others. Check in with other teams to gut check — best to not make assumptions on whether you think something you’ve made is helpful to others.​
+- For something to be part of the system it should go through multi-disciplinary reviews. For example, if it’s a component, it should be accessible, localization should be considered, content guidelines formed, and UX best practices outlines.​
+
+:::
+
+</TwoColGrid>
+
+#### The process (draft)
+
+Design system work should be treated like feature work — if it’s more than a bug fix, create a full project around it. Start with a brief, identify stakeholders, and put time on your team’s roadmap for working on it. Make sure there’s alignment between all UX disciplines and Web/backend engineering on time and collaboration expectations.​
+
+1. Designer updates the component in Figma
+2. Designer publishes the changed component for other designers to consume
+3. Designer consumes updated component in their design files to check its good
+4. Designer updates the design documentation to reflect the changes
+5. Designer approaches #bright-ui FE guild about implementing change
+6. Appointed FE creates a ticket on https://brighthr.atlassian.net/jira/software/c/projects/BUI1/boards/215 and picks up the changes
+7. FE checks for breaking changes throughout the webapp to determine new version number (from https://semver.org/):
+   - MAJOR version when you make incompatible API changes
+   - MINOR version when you add functionality in a backwards compatible manner
+   - PATCH version when you make backwards compatible bug fixes
+8. FE publishes changes
+9. FE broadcasts the changes on the [#bright-ui channel](https://brighthr.slack.com/archives/C02JU9WUGAH) and/or writes up the component changes and release notes here... [Releases](../../blog)
+10. FE guild consumes the updated component with an `npm update` in their own feature area

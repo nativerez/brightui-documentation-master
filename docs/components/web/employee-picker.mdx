@@ -1,0 +1,158 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import EmployeePicker from "@brighthr/component-employeepicker";
+import EmployeePickerReadme from "@brighthr/component-employeepicker/README.md";
+
+# Employee Picker (Teams)
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables one or multiple employees to be selected, usually to be associated with something else (e.g. a rota, a team).
+
+The employee picker (teams) is usually displayed in a modal.
+
+### Structure
+
+- **Search-by select** Toggles the mode of the search box, between searching by employee name or team
+- **Search box** Filters the list of employees by their name or team
+- **Clear filter link** Clears the text our of the search box, if text is entered there
+- **Select all/deselect all links** Selects or deselects all the employees listed in the picker
+- **Selected accordion** Contain a count showing how many employees are selected and - when expanded - all the employees currently selected
+- **Team accordions** An accordion for each team, showing how many employees are selected within that team. When expanded, shows all the employees in that team
+- **Select team/deselect team links** Selects or deselects all the employees in that team
+- **User card** A card for each employee showing their name, and optionally any error/warning text, with an icon in the top right corner indicating either selection or warning states.
+
+<SbExample
+  title="Employee picker"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-employeepicker"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/EmployeePicker"
+  showLinks
+>
+  <EmployeePicker
+    groupBy="teams"
+    toggleUsers={function noRefCheck() {}}
+    users={[
+      {
+        disabled: false,
+        firstName: "Abi",
+        id: 1,
+        lastName: "Kelley",
+        selected: true,
+        teams: [],
+        warning: "Some other warning text",
+      },
+      {
+        disabled: true,
+        firstName: "Leilani",
+        id: 2,
+        lastName: "Hernandez",
+        selected: true,
+        teams: ["Sales", "Manager"],
+        warning: "On annual leave from 11/12 to 01/01",
+      },
+      {
+        disabled: true,
+        firstName: "Alissia",
+        id: 3,
+        lastName: "Shepard",
+        selected: false,
+        teams: ["UX", "Manager"],
+        warning: (
+          <p style={{ margin: 0 }}>
+            Hello, <b>Bold some text</b>
+          </p>
+        ),
+      },
+      {
+        disabled: false,
+        firstName: "Inez",
+        id: 4,
+        lastName: "Cousins",
+        selected: false,
+        teams: "UX",
+      },
+      {
+        disabled: false,
+        firstName: "Aine",
+        id: 5,
+        lastName: "Hobbs",
+        selected: true,
+        teams: "Sales",
+      },
+      {
+        disabled: false,
+        firstName: "Myra",
+        id: 6,
+        lastName: "White",
+        selected: false,
+        teams: "Sales",
+      },
+      {
+        disabled: false,
+        firstName: "Olivia",
+        id: 7,
+        lastName: "Good",
+        selected: true,
+        teams: ["Finance", "Manager"],
+      },
+      {
+        disabled: false,
+        firstName: "Ishaan",
+        id: 8,
+        lastName: "Barber",
+        selected: false,
+        teams: "Sales",
+      },
+      {
+        disabled: false,
+        firstName: "Denny",
+        id: 9,
+        lastName: "Reese",
+        selected: false,
+        teams: "Sales",
+      },
+      {
+        disabled: false,
+        firstName: "Inayah",
+        id: 10,
+        lastName: "Parker",
+        selected: false,
+        teams: "",
+      },
+    ]}
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use whenever you need the user to be able to select multiple employees, especially if selecting teams of people is likely to be useful.
+
+#### When not to use
+
+- If the user only needs to select one employee, use the typeahead component
+- If space is restricted consider the Employee picker (Simple) instead.
+
+#### Defaults
+
+If employees are already associated (for example, when editing a team), all the employees that are currently associated must be down as selected. Otherwise, no employees should be selected.
+
+### Accessibility
+
+It must be possible to tab into the employee picker and then through all the controls and employees in a sensible order, using the keyboard to select/deselect.
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+
+{" "}
+<MDXProvider>
+  <EmployeePickerReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

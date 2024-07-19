@@ -1,0 +1,56 @@
+import SbExample from '@site/src/components/SbExample';
+import FigmaExample from '@site/src/components/FigmaExample';
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import DoDontImages from '@site/src/components/DoDontImages';
+import TextImage from '@site/src/components/TextImage' ;
+
+# Forms
+
+A form is a collection of inputs that are thoughtfully constructed to enable users to input and select information effectively.
+
+Inputs for forms can come in many different formats, including; date / time pickers, free text inputs, selects, checkboxes etc. The following pattern details how to present these different types of inputs consistently in a recognised format that makes it simple for the user to complete their tasks.
+
+### Input Anatomy
+
+#### Labels
+
+The basic anatomy of a form input is a label and and the input or selection component. Labels should always be present and clear to what is required from the user. Labels can be shared for specific component pairs (date / time pickers) but must have clear placeholders.
+
+| Type | Visual | Usage | Example |
+| ------ | ------ | ------| ------ |
+| Text input | ![](/img/StackedTextInput.png) | To allow users to input a single line of text | First and last name inputs, email addresses, etc |
+| Selection | ![](/img/StackedSelectionInput.png) | Select information from a pre-defined selection of inputs various different types of components. Use this for 5 or more options | Choosing start and end dates (and times), selecting options from a dropdown |
+| Selection controls (single) | ![](/img/SelectionControlInputSingle.png) | When using a checkbox to allow the user to confirm a simple statement | "I understand that this will permanently change name's contract" |
+| Selection controls (multiple) | ![](/img/SelectionControlInputMultiple.png) | If there are multiple selections that require controls under the same label (think of this as an open dropdown component) - use this instead of a dropdown with 4 or less options that may require further descriptions | Right to work status; Settled, Pre-settled, Not declared |
+| Selection control (switch) | ![](/img/SelectionControlInputSwitch.png) | when you require a user to turn a feature on (which result in an action or further inputs being available) | Include terminated absences |
+
+#### Placeholder text
+
+Placeholders serve as a secondary visual indicator and shouldn't replace a visible label for an input. Use placeholder text as an example of the format required inside the field, eg DD/MM/YYY. Alternatively, use placeholder text as instructions for using the component or a prompt to what can be selected, eg 'Type here' in input fields and 'Select one' for select dropdowns.
+
+<DoDontImages
+    img01="/img/Placeholder-do.png"
+    img02="/img/Placeholder-Dont.png"
+>
+
+##### Use for hints or directions
+
+Don't repeat the label for placeholder text. As the label should always be present, use instructions to help the user understand what they need to enter.
+</DoDontImages>
+
+Always ensure placeholder passes accessibility requirements for contrast and screen readers
+
+### Form Anatomy
+
+<TextImage
+    img="/img/forms-anatomy.png"
+>
+
+1. Form heading - A brief title or heading for the form, positioned top left aligned of the form.
+2. Form description (optional) - A description or instructions on what completing this form will achieve and the content within it.
+3. Inputs - Components which allow users to fill information into the form. These inputs should be clearly labeled and use placeholders to emphasise which information is required.
+4. Required inputs - Inputs that are required to for a form to be complete should be marked clearly. If all fields are required, mark the optional ones with an optional variant instead to reduce duplication.
+5. Controls - If a form requires controls such as radio buttons, checkboxes, or switches ensure that labels are horizontally aligned (left or right depending on the specific component).
+6. Buttons - Provide clear actions for completing your form. If you have required field, ensure the button to complete the form is disabled until the field is filled.
+
+</TextImage>

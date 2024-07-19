@@ -1,0 +1,70 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import { FileSelector } from "@brighthr/component-file-selector";
+import FileSelectorReadme from "@brighthr/component-file-selector/README.md";
+
+# FileSelector
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+The file selector enables users to upload one or more files from their device.
+
+### Structure
+
+- **Dropzone** Rectangular box which files can be dragged into and dropped
+- **Icon** A fixed upload icon
+- **Hint text** Default text explaining how the control can be used
+- **Browse button** Launches the file browser on the device, to allow files to be selected
+
+<SbExample
+  title="FileSelector"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-fileselector"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/FileSelector"
+  showLinks
+>
+  <FileSelector
+    className="mb-10"
+    onFilesSelected={function noRefCheck() {}}
+    text="Drag and drop files here to upload"
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use when the user should be able to add one or more than one file from their device.
+
+#### When not to use
+
+- If only one file can be uploaded, use the file input control instead.
+
+### Content
+
+#### Hint text
+
+- Use the default hint text unless you have a very distinct need to use something else.
+
+### Interactions
+
+- On dropping files in the dropzone - or confirming files to upload from the device file browser - a progress indicator should be shown.
+- If one or more of the files fails to upload, an error panel should be shown near to the file selector.
+
+### Accessibility
+
+- The "Browse" button must be available, in a sensible position in the tab order, and accept keyboard focus.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <FileSelectorReadme />
+</MDXProvider>
+
+  </TabItem>
+
+  </Tabs>

@@ -1,0 +1,77 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import WizardReadme from '@brighthr/component-wizard/README.md'
+
+# Wizard
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Nudges users to complete several steps.
+
+### Structure
+
+- **Completed steps:** show steps the users has completed with the option to return;
+- **Step title:** sets the context for each step;
+- **Active step:** shows the step the user is currently in;
+- **Remaining steps:** show steps the user has yet to complete (without current access).
+
+<SbExample
+  title="Wizard"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-wizard--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Wizard"
+  iframeUrl="iframe.html?id=components-wizard--primary&args="
+  height="300"
+/>
+
+### Guidelines
+
+#### When to use
+
+- You have a larger task (such as setting up an account) broken into steps.
+- Users need to complete information in each of the steps.
+- You want to nudge the user to complete the remaining steps.
+
+#### When not to use
+
+The process is out of the user’s control and involves status updates.
+
+### Behaviour
+
+#### Make it clear how to progress
+
+Wizards offers options for going back to completed steps. But the wizard itself has no option for moving forward.
+
+Make it clear in the rest of the screen how users can continue in the task. Use primary buttons to draw attention to the main action to get them to the next step.
+
+### Content
+
+#### Keep progress even
+
+Manage user expectations by keeping it clear what’s been done and what’s left to do. Reduce anxiety by showing their progress and continuing forward smoothly.
+
+Break the process into approximately equal steps so that each step advances the user about the same amount toward the end.
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <WizardReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+

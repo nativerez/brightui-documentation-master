@@ -1,0 +1,72 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Breadcrumb from "@brighthr/component-breadcrumb";
+import BreadcrumbReadme from "@brighthr/component-breadcrumb/README.md";
+
+# Breadcrumb
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+The breadcrumb is a navigational aid that provides users with a way to understand their location the application, and navigate to higher levels. It typically appears near the top of a page or section.
+
+### Structure
+
+- **Pages:** Names of the pages in the hierarchy. Pages that are _not_ the current page are hyperlinks. The current page is not a hyperlink.
+- **Chevron:** Indicates the direction of the hierarchy between the pages
+
+<SbExample
+  title="Breadcrumb"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-breadcrumb"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Breadcrumb"
+  showLinks
+>
+  <Breadcrumb
+    currentPage="Custom"
+    routes={[
+      {
+        href: "linky-1",
+        name: "Page 1",
+      },
+      {
+        href: "linky-2",
+        name: "Page 2",
+      },
+    ]}
+    size="sm"
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use breadcrumbs when the branch of the hierarchy can be more than 2 levels deep.
+
+For example, if the hierarchy could be Dashboard > List of items 1 > Item detail 1, then use breadcrumbs.
+
+#### When not to use
+
+- Do not use breadcrumbs where the branch of the hierarchy is 2 levels or fewer deep.
+
+#### Where to position
+
+Breadcrumbs are a device that aid navigation as well as understanding the current location in the application. Position them near the top of the page, directly under the page header.
+
+#### Content
+
+The labels in the breadcrumbs should reflect the page titles of the pages within the hierarchy and be nouns - not verbs. However, be aware that many long labels in breadcrumbs could result in wrapping on mobile devices, so consider abridged versions of page titles where this might occur.
+
+### Accessibility
+
+Links within breadcrumbs should be in the correct tab order, accept and make it clear that they have focus when accessed through the keyboard, and navigate to the correct page on Enter.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<BreadcrumbReadme />
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,121 @@
+---
+---
+
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Empty States
+
+Empty states should show when there is no available data to display. We use them to first inform of nonexistent data and then guide our users to take action.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3dNASwqNXrYbGQyHsf1Sgg%2FComponents%253A-Bright-UI%3Ftype%3Ddesign%26node-id%3D7517%253A29861%26t%3DPJbnR2Q3CPNjdGnu-1"
+  height="600"
+/>
+
+## Guidelines
+
+Empty states can occur when:
+
+- a user is setting up or using the product for the first time.
+- data is deleted, unavailable, or nonexistent.
+
+## View types
+
+- Full page e.g. bulk upload no data filled
+- Component level e.g. in a table, in a side panel like notes
+
+## Anatomy
+
+Possible elements of an empty state include:
+
+- Visual. Illustration that relates to the situation at hand.
+- Headline. Use to explain the situation at hand.
+- Body (optional). Use to direct users and explain how the user can populate the screen.
+- Primary CTA (optional). Use to help the user take an action to resolve the empty state.
+- Text link (optional). Use to provide additional user support, like documentation.
+
+### Illustrations
+
+##### Context
+
+- Ensure the illustration conveys the context of the empty state: this can be through what the user may expect to see when filled or what the action is to fill the empty state
+
+##### Styling
+
+- Use a circle in the background with colour ramp neutral-100
+- Use a sparing amount of colour ramp primary-500 to indicate some action can be taken to fill the empty state
+- Use the dots, circles, crosses flecks
+
+##### Current Variations
+
+- No assignments - (no-assignments)
+- No search results - (no-search-results)
+- No applicants - (no-applicants)
+- No items - (no-items)
+- No documents - (no-documents)
+- No files uploaded - (no-files-uploaded)
+- No notes - (no-notes)
+- No address - (no-address)
+- No data - (no-data)
+- No rota - (no-rota)
+- No shifts - (no-shifts)
+
+### Content
+
+The content should always aim to explain the situation at hand and be informative to our users about how they can populate the screen, should they wish to.
+
+##### Copy & Tone
+
+Tone should be educational and plain-spoken.
+
+<TwoColGrid>
+
+:::tip Do
+
+Use an educational and plain-spoken tone.
+
+:::
+
+:::danger Don't
+
+Use excessive emotion or exceed 1 line for headline and 2 lines for body.
+
+:::
+
+</TwoColGrid>
+
+##### Headline text
+
+Limit headline text to one line. Since users typically skim online content, the headline should contain the most important information.
+
+- For an onboarding experience: Explain what eventually populates the empty state.
+- For a no results/data experience: Explain what happened.
+
+##### Body copy
+
+Limit body copy to two lines. Use the body copy to introduce additional information about what the user can do with this UI element.
+
+- For an onboarding empty state: Describe how a feature works or what will happen when they use it, and what data the user expects to appear.
+- For a no results/data experience: Explain what they can do to try and get a different outcome.
+
+### Calls to action
+
+CTAs directly underneath the empty state are optional: they are context driven and should align up with other rules and elements on the page. CTAs should be supplementary to the copy written in the empty state and have a direct action that links to the message given.
+
+<TwoColGrid>
+
+:::tip Do
+
+- Use a primary button if the action allows the user to resolve the empty state.
+- Consider a text link to provide additional information if a button cannot resolve the empty state.
+
+:::
+
+:::danger Don't
+
+- Offer a CTA twice on the same screen. Hide the top line primary button when the action is redundant.
+
+:::
+
+</TwoColGrid>

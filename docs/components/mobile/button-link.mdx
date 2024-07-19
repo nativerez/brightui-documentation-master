@@ -1,0 +1,79 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+import DoDontImages from '@site/src/components/DoDontImages';
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Button link
+
+Displays text (potentially including data) and enables users to go somewhere or take an action by interacting with it.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D412%253A13479%26mode%3Ddesign%26t%3Dd9CybyL5vSpnaaxL-1"
+  height="600"
+/>
+
+### Structure
+
+- Text: Describes the destination or action that interacting with the button will result in. Could represent a data point that will be expanded upon through interaction with the text.
+- Colour: Along with the font weight, communicates the interactive state of the link.
+- Icon (optional): Supports the text.
+
+### Guidelines
+
+#### When to use a link
+
+- When offering less important actions users can take, in a view with alternative actions
+- When there are muitple action of similar priority in the same view
+- When the action is navigation (rather than an action) inside the app.
+- When you want to display a data point - possibly as part of a sentence - and make it interactive.
+
+#### When not to use a link
+
+- When you have a single or small number of actions you want to draw attention to — use a [button](./buttons.mdx).
+
+### Content
+
+#### Use actionable text
+
+It should be clear from the button text exactly what happens when the user interacts with it. The labels should be actionable, such as “Add employee(s)” and “Save report“.
+Avoid long explanations in the text. The text should be short and clear. If additional explanation is needed, add it above the button as text.
+
+#### Button links with icons
+
+Button links with icons are great when you need to draw more attention to the action. Icons add additional context and makes the link easier to scan.
+
+Whilst it’s essential to not overuse icons within buttons links, they can be used more frequently here than within buttons. Do keep in mind, that if everything is grabbing attention, things usually get messy.
+
+:::tip Use link colours for icons
+
+An icon should be the same color as the button link it is next to to ensure consistency and visual coherence.
+
+:::
+
+:::tip Use left icons to add context
+
+This can help to give the user visual clarity, by clearly communicating the purpose or action of the button link.
+
+:::
+
+:::tip Add a label when using including an icon
+
+Even the simplest icons like plus can be understood in many different ways. To make sure your icon is accessible, prefer adding a label to communicate the purpose.
+
+:::
+
+### Colours
+
+- Use the CTA (pink) treatment when the link is an action.
+- Use the Link (blue) treatment when the link is primarily navigation
+- Use the Desctructive (red) treatment only when the link could cause loss of data or other destructive consequences
+- Avoid disabled links where you can. If you need to use a disabled link, always make it clear why it is disabled and how users can activate it.
+
+
+### Accessibility
+
+TO DO

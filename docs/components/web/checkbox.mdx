@@ -1,0 +1,104 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SbExample from "@site/src/components/SbExample";
+import Checkbox from "@brighthr/component-checkbox";
+import CheckboxReadme from "@brighthr/component-checkbox/README.md";
+
+# Checkbox
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables users to pick multiple options from a group.
+
+### Structure
+
+- **Checkbox Controller:** The element that provides the visual affordance for the control.
+- **Label:** Text indicating the option.
+- **Description:** Used to further clarify an option.
+
+<SbExample
+  title="Primary button"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-button--primary/"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Button"
+  showLinks
+>
+  <Checkbox
+    checkboxButtonSize="base"
+    checkboxPosition="left"
+    checked
+    description="{Optional description goes here}"
+    label="Label"
+    onChange={function noRefCheck() {}}
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- To present multiple options that can each be selected.
+- To offer help or error handling for simple settings.
+- For changes that require confirmation after selection.
+
+#### When not to use
+
+- When only one of multiple options can be selected—use a radio.
+- You want to group multiple options together into a single basic choice—use a choice group.
+- For single on/off settings with an instant response—use a switch.
+
+### Behaviour
+
+#### Support progressive disclosure
+
+While it makes sense to provide users with the information they need to make a good choice, providing them with too much information at once actually makes it harder to decide.
+
+So while you might be tempted to stuff everything into labels and additional info, you should try to use progressive disclosure. This means using text links and tooltips to keep info hidden but close by.
+
+:::tip Do
+
+Present only absolutely necessary information with interactions to offer more.
+
+:::
+
+:::danger Don't
+
+Don’t overwhelm users with too much information at once.
+
+:::
+
+### Content
+
+#### Write positive labels
+
+In addition to writing positively in general, you should especially focus on positive labels for checkboxes. Focus on what happens when the checkbox is selected. Don’t use the selected state for turning off features.
+
+:::tip Do
+
+- Allow notifications
+- Receive emails with personalized offers
+- Rota has no expiration
+
+:::
+
+:::danger Don't
+
+- Turn notifications off
+- Select to opt out of emails with personalized offers
+- I need to enter dates for my rota expiration
+
+:::
+
+### Accessibility
+
+- Always ensure that the checkbox can accept keyboard input, the checkbox can be focused, activated, and modified using the keyboard alone.
+- Ensure that the input field has a visible hover state, in this case a highlighted border. When using keyboard navigation, this state is indicated by the border acting as a focus state.
+
+</TabItem>
+  <TabItem value="react" label="React">
+
+<CheckboxReadme />
+
+  </TabItem>
+
+</Tabs>

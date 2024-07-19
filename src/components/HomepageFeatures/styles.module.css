@@ -1,0 +1,15 @@
+.iconSvgWrapper {
+  @apply flex items-center justify-center w-8 h-8 p-1 bg-white bg-opacity-20 rounded-full text-primary-700;
+}
+
+.iconSvg {
+  @apply object-fill w-full h-full;
+}
+
+.logoSvgWrapper {
+  @apply w-[122px] h-[41px];
+}
+
+.logoSvg {
+  @apply object-fill w-full h-full;
+}

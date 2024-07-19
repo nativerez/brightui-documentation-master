@@ -1,0 +1,71 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import DatePicker from "@brighthr/component-datepicker";
+import SbExample from "@site/src/components/SbExample";
+import DatePickerReadme from "@brighthr/component-datepicker/README.md";
+
+# DatePicker
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Enables a user to pick a single date. Supports both choosing from a calendar and typing in a numerical date.
+
+### Structure
+
+- **Date** Displays the currently selected date (if any)
+- **Icon** Communicates that the type of the field is a date input
+
+<SbExample
+  title="Date picker"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-datepicker--no-date-selected"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/DatePicker"
+  showLinks
+  height="550"
+>
+  <DatePicker
+    date={null}
+    placeholder="Select Date"
+    legacyStyling
+    setDate={function noRefCheck() {}}
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use the date control when the user needs to enter a single date, either by selecting from a calendar or typing the date directly.
+- For dates close to the current date, or where the date is unlikely to be known, show the calendar control when the date picker gets focus. Where the date is far away and likely to be known (e.g. date of birth) do not show the calendar control.
+
+#### When not to use
+
+- If the user needs to enter a range of dates, use Date Range Picker instead
+
+#### Territory variations
+
+- For Canadian users, ensure the date picker displays using the YYYY/MM/DD format.
+
+### Content
+
+#### Default values
+
+- Set the default date for the calendar to today, unless you have a specific reason for another date being more likely to be appropriate
+
+#### Limiting acceptable dates
+
+- If the selecting of some dates (e.g. dates before today) will result in an error, prevent selection of those invalid dates within the calendar control. However, if there is likely to be any doubt about why those dates are unavailable, do not limit dates in the control and use an error with explanatory text instead.
+
+### Accessibility
+
+- Always ensure that the date picker control can accept keyboard input, and not rely entirely on interaction with the calendar control
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<DatePickerReadme />
+
+  </TabItem>
+
+  </Tabs>

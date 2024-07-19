@@ -1,0 +1,100 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import Donut from "@brighthr/component-donut";
+import SbExample from "@site/src/components/SbExample";
+import DonutReadme from "@brighthr/component-donut/README.md";
+
+# Donut
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+The donut chart is a circular chart with a hole in the centre, used to display data as a proportion of a whole. The content in the middle of the chart can provide additional context that makes it easier to understand the data.
+
+### Structure
+
+- **Ring** The outer, coloured ring. Represents 100% of the data.
+- **Segments** Two or more segments within the ring, representing proportions.
+- **Text** Optionally, textual content - often a number - adding context to the data
+
+<SbExample
+  title="Donut"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-donut"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Donut"
+  showLinks
+  height="200"
+>
+  <div className="w-32">
+    <Donut
+      animateClockWise
+      percents={[
+        {
+          color: "#3DB0F7",
+          percent: 75,
+        },
+      ]}
+    >
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="flex items-center justify-center w-full h-full font-bold text-center !text-6xl text-[#0057AD]">
+          75
+        </div>
+      </div>
+    </Donut>
+  </div>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use to display data as a proportion of a whole. It can be effective in situations where you want to compare multiple sets of data or show progress towards a goal. Donut charts (and their accompanying animation) can add visual interest to dashboard and overviews.
+
+#### When not to use
+
+- Avoid using when there are a large number of data categories, or when you need to display precise numerical values. In these situations, a bar chart or a table may be more appropriate.
+- Avoid using a donut chart when the data is not a proportion of a whole.
+
+### Content
+
+#### Specifying the centre value
+
+- Add a number in the centre of the donut if
+  - you are representing a single value in the donut
+  - that value is short enough to be shown in the space available
+  - the value is either self-explanatory is explained with accompanying text
+- Include explanatory text in the centre along with the number if
+  - it is not likely to be obvious what the number is representing
+  - the explanatory text is short enough to be shown in the space available
+- Include numbers in the form "data point/total" (e.g. 4/10) if
+  - the importance of the number of incomplete / unfinished items is as high as the important of complete / finished items
+
+#### Making it clear what categories are
+
+- If using a donut chart, it must be clear what the categories in the chart represent. For this reason, favour using them for representing
+  - single values as part of a whole, or
+  - pairs of values that collectively make up the whole
+
+If you use them for more than 2 categories, you must have an associated key indicating the categories associated with each colour.
+
+#### Drawing
+
+- In general, favour drawing in a clockwise direction (from empty to full). This direction supports the feeling of progress & completion.
+- Draw in an anticlockwise direction (from full to empty) only when the value is something that users would prefer to be smaller / zero (e.g. absences).
+
+### Accessibility
+
+- Ensure that the colours used in the chart are sufficiently different to be discerned from each other, including by people with differing colour vision.
+- Ensure that any information describing the categories or values in the chart is accessible to screen readers.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <DonutReadme />
+</MDXProvider>
+
+  </TabItem>
+
+</Tabs>

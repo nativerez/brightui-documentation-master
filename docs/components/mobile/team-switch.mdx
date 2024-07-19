@@ -1,0 +1,54 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Team Switch
+
+Use this to switch between viewing the dashboard for your team's information or your own as an admin/manager
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D23%253A655%26mode%3Ddesign%26t%3D8oK4xFGLHwVv6cJO-1"
+  height="600"
+/>
+
+### Structure
+
+- Switch: Indicates dashboard being set for personal or team view (Me/Team). The 'Me' control will always be left aligned and the 'Team' control is always right aligned.
+
+### Guidelines
+
+#### When to use
+
+- This switcher should only appear for admins and managers.
+- This switch only appears on the dashboard.
+
+#### Variants
+
+- Me is active
+- Team is active
+
+### Behaviour
+
+This team switch differs from switch as it is not turning a feature on or off. Instead this switches the dashboard between two different contexts. As such, labels are contained within the switch itself.
+
+#### Use more than just one colour
+
+The activated state is highlighted with colour primary-700 with the inactive side and background being primary-100. 
+Text colour should also change depending on the state. Active states should use white text, whilst inactive states should use primary 700
+
+#### Use animation
+
+When switching between the two states, animate the switch moving between 'Me' and 'Team' in under 1000ms.
+
+### Content
+
+#### State labels
+
+Keep labels for the team switch short and consistent.
+
+The team switch labels should describe what context the dashboard will switch to when being used. Do not use any other labels than 'me' and 'team'. This is locked to this naming convention.
+
+### Accessibility
+
+- As a tappable feature. Component must have a minimum height of 44px regardless of screen size. Each control should also be a minimum width of 44px to easily tap between the two states.

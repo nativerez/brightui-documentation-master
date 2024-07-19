@@ -1,0 +1,87 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SbExample from "@site/src/components/SbExample";
+import { MDXProvider } from "@mdx-js/react";
+import Paginator from "@brighthr/component-paginator";
+import PaginatorReadme from "@brighthr/component-paginator/README.md";
+
+# Paginator
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Use pagination to let users move through an ordered collection of items that has been split into pages. The paginator uses buttons for previous, next, and specific pages, to move back and forth between pages.
+
+### Structure
+
+- **Record count** Indicates how many records are in the current page, where you are in the overall list, and how many records there are altogether
+- **Previous & Next buttons** Enables the user to move to previous or next pages
+- **Page indicators/buttons** Indicates the current page being viewed, the number of the last page, and up to 2 intermediate pages. Where a page number is shown, clicking the number enables the user to move to that page
+
+<SbExample
+  title="Paginator"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-paginator"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Paginator"
+  showLinks
+>
+  <Paginator
+    currentPage={0}
+    onPageChange={function noRefCheck() {}}
+    pageSize={10}
+    totalItems={500}
+  />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use pagination when the back-end system needs to page the collection for performance reasons
+
+#### When not to use
+
+- If you can avoid paginating a view it is usually good to do so. It is hard for users to predict what page a desired item is on, and browsing pages for items typically requires more interactions than unpaged views.
+
+#### Infinite scrolling vs. loading on-demand vs. pagination
+
+For data collections where there are significant performance reasons not to load all the data in one go, there are a number of alternative possibilities to consider:
+
+- Infinite scrolling. As the user nears the end of the list, more items load. Infinite scrolling is good for exploratory browsing type behaviours, where a user is likely to want to continue to explore down the list. It should be avoided if there is content at the bottom of the page that the user needs to access, and can cause difficulties for people using keyboard.
+- Loading on demand. When the user reaches the end of a 'page', they are able to click/tap a button to load the next set. The advantages are similar to those of infinite scrolling, but give the user more control over loading additional pages - and enable content at the bottom of the page to be accessed.
+- Pagination. If the user is likely to want to identify specific items in the list or work on the full set of data (e.g. re-ordering, sorting), a paginated list is likely to be preferable.
+
+### Content
+
+#### Item types
+
+- In the record count section of the paginator, use a specific label for the type of records in this data set. (E.g. "employees", "expenses").
+
+#### Indicating how many pages there are
+
+- The paginator adapts to show pages that are adjacent to the current page, along with the first and last page numbers.
+
+### Behaviour
+
+- Clicking Previous navigates to the previous page in the set (where available). This button is disabled on the first page.
+- Clicking Next navigates to the next page in the set (where available). This button is disabled on the last page.
+- Clicking a page number navigates to that page in the set.
+- Clicking the elipsis (where present) reveals hidden page numbers that can then be used for navigation.
+
+#### Sorting / filtering
+
+If the view can be sorted or filtered, ensure that the whole collection (all pages) is sorted or filtered, and not just the currently visible data
+
+### Accessibility
+
+- All interactive elements within the paginator must be keyboard accessible, and clearly shown focus and current selection
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <PaginatorReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,51 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Buttons
+
+Provides an interaction focal point for an action a user can take, such an initiate a process, take a next step, or confirm an action.
+
+There are two main types of button used in our mobile apps 
+- button (which sits in the content of a view)
+- floating action button (which sits on top of the content)
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D412%253A13479%26mode%3Ddesign%26t%3Dd9CybyL5vSpnaaxL-1"
+  height="600"
+/>
+
+### Structure
+
+#### Button
+
+- Text: Describes the action that interacting with the button will result in. Should start with a verb.
+- Icon: (Optional) Provides additional context to the action. 
+
+#### FAB
+
+- Icon: Provides an indication of what the floating action button will result in
+- Text: (Optional) Describes the action that interacting with the button will result in. Should start with a verb.
+
+### Guidelines
+
+#### When to use a button
+
+- Use a button when the action applies to the content within the view: such as within a panel or as part of a form.
+
+#### When to use a FAB
+
+- Use a FAB when the action applies to whole view: such as adding an item to a list
+
+#### When not to use a FAB or a button
+
+- If displaying a data point that will result will be navigating elsewhere in the app, use a [link](./button-link.mdx) instead.
+
+### Rules around primary buttons, use of icons
+
+[Guidance around buttons](../web/button.mdx) in general applies equally to native mobile apps and to web. Use this guidance to consider whether to use a primary, secondary, or destructive button, along with when to disable buttons 
+
+### Accessibility
+
+TO DO

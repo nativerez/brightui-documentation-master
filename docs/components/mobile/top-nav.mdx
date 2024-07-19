@@ -1,0 +1,59 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Top nav
+
+The top nav gives context to the current view, and easy access to relevant navigation and actions. It communicates the name of the current view, and optionally navigation and actions that apply to the view
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYFQOTSiD1G8bLeGkNkTcVJ%2FComponents%253A-Mobile-Apps%3Ftype%3Ddesign%26node-id%3D416%253A13522%26mode%3Ddesign%26t%3DFQu3WCWy5nuACmUF-1"
+  height="600"
+/>
+
+### Structure
+
+- Page title: The name of the current view
+- Right-aligned actions (optional): Icons representing 1 or 2 actions that apply to this view
+- Back chevron (optional): A left-aligned, left-pointing chevron that navigates to the previous view
+- Close action (optional): A left-aligned close button that closes this area of the app, usually returning the user to the home page
+- Left-aligned label (optional): A description of where the back chevron will navigate to
+
+### Guidelines
+
+#### When to use
+
+- Expect to use the top nav on all mobile application views, wth the exception of the home page.
+
+#### When not to use
+
+- Don't use this style of header on the main application home page
+
+### Rules around use of icons, titles, and chevron/close
+
+#### Actions and their icons
+
+Optionally, provide access to 1 or 2 actions through the top nav. Include actions on the top nav only if they apply to the whole view and you believe that the icon alone is likely to be self-explanatory.
+
+- if the actions need the selection of an item within the view then place that action with the items. 
+- if the action is the last step of completing a form, place that action on the form within the view
+- consider whether a [FAB](./buttons.mdx) - which is less of a stretch to access - might be a better alternative.
+
+#### Main and navigation titles
+
+- Every page must have a main centre title. This title should be short - 1 or 2 words, and 20 character or less. The title must be descriptive of the entire contents of the view, and either start with a noun (if a view of items) or a verb (if part of an action). Most likely the title will match the name on the button or navigation item that the user interacted with the reach this view.
+- If the top nav contains a Back chevron, it can optionally include a navigation title. Use a navigation title if the location of where the Back chevron navigates to will be substantially clearer if labelled
+
+#### Back chevron vs. close
+
+- Use the close button when this whole area of the app will close if interacted with. This usually means returning the user to the home page of the app.
+- Use the back chevron when the user will go to a previous view witin the same area of the app. 
+
+### Light vs dark variants 
+
+- Use the light variant of the top nav, unless you are working in a part of the application where the dark variant is already dominant.
+
+### Accessibility
+
+TO DO

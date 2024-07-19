@@ -1,0 +1,143 @@
+import DoDontImages from "@site/src/components/DoDontImages";
+import SbExample from "@site/src/components/SbExample";
+import Button from "@brighthr/component-button";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { MDXProvider } from "@mdx-js/react";
+import ButtonReadme from "@brighthr/component-button/README.md";
+
+# Button
+
+Allows a interaction focal point for an action a user can take. Users can do things with buttons. Take a next step. Confirm actions. They are styled links to attract users and drive them in a specific action.
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+### Structure
+
+- **Container:** Wraps the content, and allows for a colour style/s to be added.
+- **Text:** Conveys the action message relevant to the button.
+- **Icon** (optional): Supports or directly communicates the text, can be left or right aligned.
+- **Spinner:** Spinner loading icon as an indication for progressive action. Should be left aligned and not used in conjuntion with icons.
+
+<SbExample
+  title="Primary button"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-button--primary/"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Button"
+  showLinks
+>
+  <Button text="Button title" />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- A button element is used to indicate an action.
+
+#### When not to use
+
+- When you have many actions at once—use a [button link](./button-link).
+- You want to offer a less important action—use a [button link](./button-link).
+- To make text inside paragraphs or lists actionable—use a text link.
+
+#### Identify the most important actions
+
+> ### _If everything looks important, then nothing is important._
+>
+> — Patrick Lencioni
+
+Users need to be certain of what action to take next. You need to know which actions are the most important within a given section of the user flow.
+
+Once you’ve identified which actions are the most important at the moment, you can indicate importance through size, type, and variation.
+
+<DoDontImages
+  img01="/img/buttonDo.png"
+  img02="/img/buttonDont.png"
+>
+
+#### Have one primary action
+
+Ideally every screen should have only one button that represents the most
+important action. It leads the user to the next step.
+
+</DoDontImages>
+
+#### Avoid disabled buttons
+
+Many designers want to show users that actions will be possible in the future, so they end up using disabled buttons to show potential actions. But such buttons often end up confusing users about what’s possible.
+
+Instead, try to focus on using progressive disclosure to show them only the actions they should take right at the moment. Then when it’s possible for them to take action, you can show them more buttons.
+If you need to use a disabled button, always make it clear how users can activate it, such as with a tooltip.
+
+#### Use actionable text
+
+It should be clear from the button text exactly what happens when the user interacts with it. The labels should be actionable, such as “Add employee(s)” and “Save Report“.
+
+Avoid long explanations in the button text. The text should be short and clear. If additional explanation is needed, add it above the button as text.
+
+:::tip Use secondary buttons for items in loop
+
+If you have a repeated view, use the secondary button for their main action. Primary buttons would offer too many choices to select from.
+
+:::
+
+#### Buttons with icons
+
+Buttons with icons are great when you need to draw more attention to the action. Icons add additional context and makes the buttons more easy to scan.
+
+But it’s essential to not overuse these buttons. If everything is grabbing attention, things usually get messy.
+
+##### Use a left icon when the button adds another item
+
+For cases like this, it’s great to use an icon with a plus to represent the addition, such as PlusCircle or EmployeeAdd.
+
+<SbExample
+  title="Button with icon"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-button--primary/"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Button"
+>
+  <Button iconName="plus-thick" iconPosition="left" text="Add new employee" />
+</SbExample>
+
+:::tip Right icons should only be directional
+
+They can help explain what happens when the user interacts with the button. An icon (with an aria-label) makes it easier to know if the user is taken elsewhere.
+
+:::
+
+<SbExample
+  title="Button with right icon"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-button--primary/"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Button"
+>
+  <Button
+    iconName="chevron-thick-right"
+    iconPosition="right"
+    text="View more info"
+  />
+</SbExample>
+
+:::tip Add a label when using icon-only buttons
+
+Even the simplest icons like plus can be understood in many different ways. To make sure your icon is accessible, add a proper label to communicate the purpose.
+
+:::
+
+### Accessibility
+
+:::note TODO
+
+Add accessibility requirements and considerations.
+
+:::
+
+  </TabItem>
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <ButtonReadme />
+</MDXProvider>
+
+  </TabItem>
+</Tabs>

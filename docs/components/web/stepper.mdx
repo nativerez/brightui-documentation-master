@@ -1,0 +1,45 @@
+---
+---
+
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Stepper
+
+Enables incremental changes of a counter without a direct input.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3dNASwqNXrYbGQyHsf1Sgg%2FComponents%253A-Bright-UI%3Ftype%3Ddesign%26node-id%3D8601%253A32328%26t%3DqEm6Piajh2PIsjIa-1"
+  height="650"
+/>
+
+### Structure
+
+- **Value:** displays the current value (Can also be a direct text input);
+- **Decrement controller:** decreases the value;
+- **Increment controller:** increases the value.
+
+### Guidelines
+
+#### When to use
+
+- To let users change small amounts of something in a separate context.
+
+### Content
+
+#### Make the value clear
+
+A stepper by itself only presents a number. Make sure it’s clear from context what the value refers to and what users are changing by incrementing in either direction.
+
+You can do this with text, icons, or other clues nearby to show the full context of the number.
+
+#### Use titles
+
+So your stepper is useful even for people who don’t see visual cues, include titles for each increment button. This means using text like "Add a employee" and "Remove a employee" to make it clear directly in the button what the result of the button is.
+
+### Accessibility
+
+:::note
+
+- To improve accessibility for the Increment and Decrement controls it's best to add a title describing the action.
+
+:::

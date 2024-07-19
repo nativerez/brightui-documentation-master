@@ -1,0 +1,54 @@
+import SbExample from '@site/src/components/SbExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MDXProvider } from '@mdx-js/react'
+import XingReadme from '@brighthr/component-xingloader/README.md'
+
+# Xing loader
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+
+Used to show indeterminate progress, especially at a page level.
+
+### Structure
+
+- **Xingloader** A looped indicator in the form of our brand logo, which indicates progress.
+
+<SbExample
+  title="Zingloader"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-xingloader"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Xingloader"
+  iframeUrl="iframe.html?id=components-xingloader--primary&args="
+/>
+
+### Guidelines
+
+For guidelines on when to use and when not to use, see the [Loading states](../../design-patterns/loading-states) design pattern
+
+#### Spinner vs. XingLoader
+
+Prefer the Xing loader for page-level indeterminate progress. For a sub-page / component-level inderderminate progress indicator, use the [Spinner](./spinner).
+
+### Accessibility
+
+:::
+
+TO DO
+
+:::
+
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+  
+  <MDXProvider >
+    <XingReadme />
+  </MDXProvider>
+  
+  </TabItem>
+</Tabs>
+
+

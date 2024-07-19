@@ -1,0 +1,64 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SbExample from "@site/src/components/SbExample";
+import { MDXProvider } from "@mdx-js/react";
+import Icon from "@brighthr/component-icon";
+import IconReadme from "@brighthr/component-icon/README.md";
+
+# Icon
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+# Icon
+
+Icons are used to visually communicate core parts of the product and available actions. They can act as wayfinding tools to help users more easily understand where they are in the product, and common interaction patterns that are available.
+
+### Structure
+
+- **Icon** The pictorial form of the icon
+
+<SbExample
+  title="Icon"
+  storyUrl="https://storybook.bright.hr/?path=/story/foundations-icon--setup"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Icon"
+  showLinks
+>
+  <Icon iconName="calendar-dates" size="base" />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- Use icons where visually distinguishing a list of actions or data points could be useful. Always accompany an icon with text, unless it is a _very_ commonly used concept or you have user research indicating it is understood alone.
+
+#### When not to use
+
+- Use icons cautiously. By themselves, they are rarely understandable in terms of their function.
+- Avoid using additional icons when there are already many on the page. Adding more icons in this situation can lead to visual noise and clutter, and diminish the usefulness of the icon.
+
+### Choosing the right icon
+
+- Consistency in the icons we use is essential. Refer to the [list of icons](../../foundations/icons) and their meanings before selecting your icon.
+
+### Accessibility
+
+- Avoid relying on icons alone. If an icon is used without text, ensure that the alternative text for the icon indicates its purpose (e.g. "Add attachment") and not its name (e.g. "Paperclip").
+- If an icon is purely decorative it doesn't need to be read by a screenreader.
+- There should be a colour contrast rato of 4:5:1 between the icon and background.
+- Users should be able to navigate to the icon using a keyboard, have a clear indication when it is selected and action it using the Enter or Space keys.
+- The contrast ratio of focus indicators and the background must be at least 3:1
+- The icon should be at least 44x44 pixels in size and users should be able to increase icon size by 200%.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <IconReadme />
+</MDXProvider>
+
+  </TabItem>
+
+</Tabs>

@@ -1,0 +1,70 @@
+---
+---
+
+import SbExample from '@site/src/components/SbExample';
+
+# Segmented control
+
+The segmented control is a UI component that allows users to toggle between two or three options, providing a clear and visually distinct representation of the current selection. 
+
+The information is usually contextual to the same UI, hence the controlled switch which should populate different data based on the use case but involve the same UI.
+
+### Design Principles
+
+#### Clarity: 
+
+The segmented control should have a clear visual distinction between the available options, ensuring that users can easily identify the current selection.
+
+#### Contextual Options: 
+
+The options provided in the segmented control should be relevant to the UI context, enabling users to make informed selections based on the current state or task.
+
+#### Consistency: 
+
+The segmented control's appearance and behavior should align with the overall UI design and maintain consistency with other UI elements. It has a blue background following the bright colours which also gives it visual differentation from the rest of the UI and prompts users to its importance for the change in context of the display.
+
+### Guidelines
+
+- If the UI has more than three options then consider using a different UI, such as a dropdown list.
+- The copy for each heading should be kept short similar to tabs and summarise the view in a word or two. 
+
+### Anatomy
+
+#### Structure
+
+- ** Segmented Control Container ** The segmented control should be contained within a visually distinct container, providing a clear separation from other UI elements.
+- ** Options ** The segmented control should display two or three options, typically represented as text labels. Each option has a visually distinct appearance, indicating the selected and unselected states.
+- ** Selected State ** The selected option has a visually prominent appearance to differentiate it from the unselected option in the form of the primary-700 colour for its background.
+- ** Unselected State ** The unselected option is visually subdued in appearance to indicate that it is not currently selected. There is a mouse change animation to show it is still interactable.
+
+#### Sizes
+
+We have different sizes for the segemnted control component. The reason for this is....
+
+- ** xs ** 
+- ** sm **
+- ** base **
+- ** lg **
+
+#### Option count
+
+- ** Two options **
+- ** Three options **
+
+### Behaviour
+
+A segment reveals its associated content (tab panel) when activated.
+Only one segment can be active at a given time.
+
+#### Default
+
+The default option should always be the segmented control furthest to the left. This is down to designer discression in terms of what option we place first based on the use case where the segmented control is.
+
+#### Responsive considerations
+
+Sizes can differ between repsonsive displays to suit the available screen width. Depending on the width limit on mobile, we should 
+
+### Accessibility
+
+Segmented control should be available to use and toggle between with screen readers.
+The colours should all be accessible to WCAG AA standard.

@@ -1,0 +1,75 @@
+import SbExample from "@site/src/components/SbExample";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Select from "@brighthr/component-select";
+import SelectReadme from "@brighthr/component-select/README.md";
+
+# Select
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+A select (dropdown) lets users choose one option from a set.
+
+### Structure
+
+- **Current selection** A one-row-height field showing the current selection (if any) or placeholder text
+- **Options list** A list of all the options available to choose from
+
+<SbExample
+  title="Select"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-select"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Select"
+  showLinks
+>
+  <Select label="">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </Select>
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+The select component should:
+
+- Be used for selecting between 4 or more pre-defined options
+- Have a default option selected whenever possible
+- Have a placeholder “Select an option” only if there’s no logical default option
+
+#### When not to use
+
+- If there are fewer than 4 options to choose from, consider a [radio](./radio), [split button](./button-split), or [checkbox](./checkbox) instead
+- If there is only 1 option, don't use a select. Either do not display the option, or output the value as a label.
+
+### Content
+
+#### Labels for a select
+
+The label accompanying a select should:
+
+- Be a short description (1–3 words) of the requested input
+- Not be phrased as a question, or a partial sentence that is completed by the selection option (e.g. "My email address is")
+- Avoid attempting to explain the meaning of the field in detail. If additional info might be needed for some users, use info and tooltips rather than relying on long descriptive labels.
+
+#### Options order
+
+- Start with “Select an option” as a placeholder if there isn’t a default option
+- List options alphabetically unless there is a more logical order that enables user to easily find the option they need
+- Write in sentence case
+
+### Accessibility
+
+- If the field is in error (for example, because a selection is required before proceeding) ensure that error text is displayed indicating the problem, as well as the error state on the select field itself
+- The select field, and its contents, must be keyboard accessible
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<SelectReadme />
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,40 @@
+.admonition {
+  @apply !mb-6;
+}
+
+.admonitionContent > ul {
+  @apply pl-0 space-y-4 list-disc;
+}
+
+.admonitionContent > h1,
+.admonitionContent > h2,
+.admonitionContent > h3,
+.admonitionContent > h4,
+.admonitionContent > h5 {
+  @apply font-semibold;
+}
+
+.admonitionHeading {
+  @apply !uppercase mb-[0.3rem];
+}
+
+.admonitionHeading code {
+  text-transform: none;
+}
+
+.admonitionIcon {
+  @apply inline-block align-middle mr-[0.4rem];
+}
+
+.admonitionIcon svg {
+  @apply inline-block h-6 w-6;
+  fill: var(--ifm-alert-foreground-color);
+}
+
+.admonitionContent > :last-child {
+  @apply mb-0;
+}
+
+.theme-admonition-caution {
+  @apply !border-[#C2670A];
+}

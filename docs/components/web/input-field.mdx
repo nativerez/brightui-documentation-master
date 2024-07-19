@@ -1,0 +1,116 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import SbExample from "@site/src/components/SbExample";
+import { MDXProvider } from "@mdx-js/react";
+import Input from "@brighthr/component-input";
+import InputReadme from "@brighthr/component-input/README.md";
+
+# Input Field
+
+<Tabs defaultValue="design">
+  <TabItem value="design" label="Design" default>
+
+Offers users a simple input for a form.
+
+### Structure
+
+- Label: Provides a clear description of what users should fill in;
+- Placeholder: Provides additional help for expected values;
+- Prefix: Optionally adds icon to improve clarity.
+- Suffix: Optionally adds icon or text context for expected values.
+
+<SbExample
+  title="Input field"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-input--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Input"
+  showLinks
+>
+  <Input label="" placeholder="Placeholder text" value="" />
+</SbExample>
+
+### Guidelines
+
+#### When to use
+
+- To gather basic information from users.
+- To specify what kind of data users can enter.
+
+#### When not to use
+
+- You have multiple related fields—use an input group.
+- You want longer responses from users (such as feedback)—use a [text area](./textarea).
+- You want users to upload a file—use an [input file](./input-file).
+
+### Behaviour
+
+#### Set input mode
+
+Setting the proper input mode for the field (such as number, email address) helps make it clear what’s expected. It also displays the correct keyboard on mobile devices, making it easier for users to complete the field.
+
+### Content
+
+#### Use labels
+
+Labels serve to clearly present what’s expected. They’re especially important for people who don’t see other visual cues. But they also help everyone know exactly what to enter.
+
+For the label, use short descriptive phrases, ideally nouns that make the request clear. See our [vocabulary document](https://brighthr.atlassian.net/wiki/spaces/UR/pages/3830415367/Vocabulary+glossary) on confluence for some examples.
+
+#### Use error and help messages
+
+For more complicated fields, sometimes labels aren’t enough. You want to include any necessary information as clear as possible to help users complete the fields.
+
+Use help messages to guide users before they enter anything and clear calm error messages when there’s a problem with what they entered.
+
+Remember that such messages are likely to invoke negative feelings, so be positive and focused on solutions to any problems.
+
+<SbExample
+  title="Error and help messages"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-input--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Input"
+>
+  <div className="space-y-2">
+    <Input
+      label="Email address"
+      error
+      placeholder="Placeholder text"
+      value="firstname.lasttname"
+    />
+    <p className="text-error-500 text-sm">Email address not valid</p>
+  </div>
+</SbExample>
+
+#### Include placeholder examples
+
+When you have additional information or helpful examples, include placeholder text to help users along.
+
+Remember that placeholder text is visually less important, low in contrast, and disappears once users enter anything. So do **not** include anything **necessary** to complete the field.
+
+<SbExample
+  title="Placeholder example"
+  storyUrl="https://storybook.bright.hr/?path=/story/components-input--primary"
+  gitUrl="https://github.com/brighthr/bright-ui/tree/main/packages/Input"
+>
+  <div className="space-y-2">
+    <Input label="Bank name" placeholder="Barclays" value="" />
+    <Input label="Sort code" placeholder="01-02-03" value="" />
+    <Input label="Account number" placeholder="12345678" value="" />
+  </div>
+</SbExample>
+
+### Accessibility
+
+- Always ensure that the input field can accept keyboard input, the input field can be focused, activated, and modified using the keyboard alone.
+- Ensure that the input field has a visible focus indicator, in this case a highlighted border with the brand colour #3DB0F7. Input fields should be focused on click, or when navigating to it with the keyboard.
+- Error handling: provide clear communication when there is incorrect an input, this takes place in the form of a red highlighted border.
+
+</TabItem>
+
+  <TabItem value="react" label="React">
+
+<MDXProvider>
+  <InputReadme />
+</MDXProvider>
+
+  </TabItem>
+
+</Tabs>

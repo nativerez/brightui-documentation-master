@@ -1,0 +1,40 @@
+---
+---
+
+# Sort Ordering
+
+Our employee lists are sorted alphabetically by the employee's full name, which includes their first and last names. The sorting algorithm used is case-insensitive, meaning that uppercase and lowercase letters are treated as equal for sorting purposes.
+
+### Sorting Rules
+
+1. **Primary Sort Key**: Full Name (First Name + Last Name)
+   - The sorting algorithm treats the full name as a single string for sorting purposes.
+   - Example: "John Doe" comes before "Jane Smith" in the sorted list.
+2. **Secondary Sort Key**: Case-Sensitivity
+   - If two or more employees have the exact same full name (including the same case), the sorting algorithm uses case-sensitivity as a secondary sort key.
+   - Uppercase names are sorted before their lowercase counterparts.
+   - Example: If there are two employees named "John Doe", one with "JOHN DOE" and another with "John Doe", "JOHN DOE" will appear first in the sorted list.
+3. **Tertiary Sort Key**: Employee ID
+   - If two or more employees have the exact same full name and the same case, the sorting algorithm uses the employee ID as a tertiary sort key.
+   - Employee IDs are unique identifiers assigned to each employee, and they are used to maintain a consistent sorting order when all other sort keys are equal.
+   - Employee IDs are sorted in ascending order.
+   - Example: If there are two employees named "JOHN DOE" with the same case, their order in the sorted list will be determined by their respective employee IDs.
+
+### Example Sorted List
+
+Given the following list of employees:
+
+- JOHN DOE (Employee ID: 12345)
+- John Doe (Employee ID: 67890)
+- Jane Smith
+- john doe (Employee ID: 54321)
+
+The sorted order would be:
+
+1. Jane Smith
+2. JOHN DOE (Employee ID: 12345)
+3. John Doe (Employee ID: 67890)
+4. john doe (Employee ID: 54321)
+
+In this example, "Jane Smith" comes first because it sorts before any variation of "John Doe" alphabetically. The "JOHN DOE" entry with Employee ID 12345 comes before the "John Doe" entry with Employee ID 67890 due to case-sensitivity. Finally, the "john doe" entry with Employee ID 54321 comes last because it is sorted after the uppercase variations of the name based on case-sensitivity.
+By following these sorting rules, the employee list will be consistently sorted, even in scenarios where multiple employees have the same name but with different cases.

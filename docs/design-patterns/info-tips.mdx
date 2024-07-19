@@ -1,0 +1,53 @@
+---
+---
+
+import TwoColGrid from '@site/src/components/TwoColGrid';
+import FigmaExample from '@site/src/components/FigmaExample';
+
+# Information tips
+
+We use information tips when a label, field, or value could benefit from additional explanation.
+
+<FigmaExample
+  iframeUrl="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FPq1MVqu1bDUD2gxzsjzhGT%2FBLU-1161----ANZ-Employee-Profile%3Fnode-id%3D664%253A8324%26t%3DH9NejNX87GjflPv1-1"
+  height="600"
+/>
+
+## Guidelines
+
+<TwoColGrid>
+
+:::tip Do
+
+Use an information tip for a term or value that cannot be made more self-explanatory, and that users will understand after receiving an explanation once.
+
+:::
+
+:::danger Don't
+
+Use information tips for explanatory content that users will need to refer to repeatedly - make it more visible instead.
+
+Use information tips as a sticking plaster to obscure terms or abbreviations, especially if we've made them up ourselves
+
+:::
+
+</TwoColGrid>
+
+## Anatomy
+
+The presence of an information tip is indicated by an icon (information) next to the term that requires further explanation.
+
+There are two possible interactions with an information tip
+
+1. on hover, display the explanatory content
+2. on click/tap, display a modal containing the explanatory content
+
+Prefer the first method if the content is short (one sentence or less) and the second method if the content is longer.
+
+### Content
+
+Explanatory content launched from information tips should be as concise as possible, whilst explaining the value or concept. Remember to use our tone of voice and style, and avoid using jargon or complicated language.
+
+### Accessibility
+
+The information icon should have alt text that enables users to understand what will happen if they interact with it. For example "Learn more about accrued leave balance".

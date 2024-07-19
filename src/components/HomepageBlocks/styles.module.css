@@ -1,0 +1,7 @@
+a {
+  @apply text-primary-600;
+}
+
+.svgFrame {
+  @apply self-start shrink-0 grid place-content-center w-8 h-8 bg-primary-50 rounded-full text-primary-700;
+}
