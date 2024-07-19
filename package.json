@@ -20,7 +20,7 @@
     "@brighthr/component-avatar": "^1.1.3",
     "@brighthr/component-badge": "^2.3.3",
     "@brighthr/component-breadcrumb": "^1.1.3",
-    "@brighthr/component-button": "^2.1.4",
+    "@brighthr/component-button": "^3.0.3",
     "@brighthr/component-checkbox": "^2.0.0",
     "@brighthr/component-contextmenu": "^2.2.2",
     "@brighthr/component-datepicker": "^2.2.5",
