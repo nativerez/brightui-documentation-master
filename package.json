@@ -39,7 +39,7 @@
     "@brighthr/component-sidedraw": "^1.1.3",
     "@brighthr/component-spinner": "^1.0.1",
     "@brighthr/component-split-button": "^1.0.0",
-    "@brighthr/component-styled-tab": "^3.3.4",
+    "@brighthr/component-styled-tab": "^5.1.14",
     "@brighthr/component-switch": "^1.0.1",
     "@brighthr/component-table": "^2.0.1",
     "@brighthr/component-textarea": "^1.0.1",
